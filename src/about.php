@@ -1,4 +1,7 @@
 <?php
+/*
+Template name: О компании
+*/
 get_header();
 
 require 'layouts/about-hero/about-hero.php';

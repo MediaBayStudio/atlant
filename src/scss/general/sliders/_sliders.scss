@@ -2,33 +2,31 @@
 @import '../../assets/colors';
 @import '../../assets/mixins';
 @import '../../assets/variables';
-.dot {
-  
-}
-
-
-li.slick-active {
-  > .dot {
-    cursor: default;
-  }
-}
 
 .dots {
-  display: none;
+  display: flex;
+  justify-content: center;
   > li {
     &:nth-last-child(n+2) {
-      margin-right: 5px;
+      margin-right: 14px;
     }
-  }
-  .dot {
-    width: 0px;
-    height: 0px;
   }
 }
 
-.slick-list ~ .dots {
-  display: flex;
-  justify-content: center;
+li.slick-active > .dot,
+.quiz__dot.active {
+  cursor: default;
+  transform: scale(2);
+  background: $red;
+}
+
+.dots .dot,
+.quiz__dot {
+  width: 6px;
+  height: 6px;
+  background: $light;
+  border-radius: 50%;
+  transition: transform .35s, color .35s
 }
 
 .slick {
@@ -78,4 +76,17 @@ li.slick-active {
       -ms-transform: translate3d(0, 0, 0);
        -o-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
+}
+
+
+.arrow {
+  // transition: opacity .35s, transform .35s;
+  transition: opacity .35s;
+  &.slick-disabled {
+    opacity: 0.5;
+    // transform: scale(.75);
+  }
+  &__svg {
+    pointer-events: none;
+  }
 }

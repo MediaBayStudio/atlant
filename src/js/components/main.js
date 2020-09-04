@@ -19,11 +19,26 @@ document.addEventListener('DOMContentLoaded', function() {
   setVh();
 
   svg4everybody();
+
+
+  // Запретим стандариное действие при нажатии на ссылки с подменю
+  hdr = q('.hdr');
+
+  hdr.addEventListener('click', function() {
+    let target = event.target,
+      targetHref = target.getAttribute('href');
+
+    if (targetHref[0] === '#') {
+      event.preventDefault();
+    }
+  });
   
   //includes
 //=include menu.js
 //=include popups.js
 //=include forms.js
 //=include sliders.js
+//=include telMask.js
+//=include quiz.js
 
 });

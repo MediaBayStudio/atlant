@@ -2,3 +2,66 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.stages-sect {
+
+  &__title {
+    font-size: 54px;
+  }
+  &__subtitle {
+
+  }
+  &__stages {
+
+  }
+}
+
+.stages_circle {
+  max-width: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 48% 4% 48%;
+  text-align: right;
+  > .stage {
+    &-1 {
+      grid-row: 1;
+      grid-column: 1;
+    }
+    &-2 {
+      grid-row: 1/span 2;
+      grid-column: 3;
+      text-align: left;
+      align-self: center;
+    }
+    &-3 {
+      grid-row: 2;
+      grid-column: 1;
+    }
+    > .stage__number {
+
+    }
+    > .stage__title { 
+      font-size: 18px;
+    }
+    > .stage__descr {
+      font-size: 16px;
+      font-weight: normal;
+    }
+  }
+}
+
+.stages_numbers {
+
+  > .stage {
+
+    > .stage__number {
+
+    }
+    > .stage__title {
+
+    }
+    > .stage__descr {
+
+    }
+  }
+}

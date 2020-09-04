@@ -2,3 +2,100 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.quiz-sect {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  &__title {
+    font-size: 30px;
+    max-width: 375px;
+  }
+
+  &__subtitle {
+    font-size: 22px;
+    max-width: 350px;
+  }
+
+  &__quiz {
+    width: 100%;
+    margin: 0;
+    padding: 55px;
+  }
+}
+
+.quiz {
+  &__header {}
+
+  &__heading-block {}
+
+  &__steps-counter {}
+
+  &__current-steps-number {}
+
+  &__total-steps-number {}
+
+  &__dots {}
+
+  &__body {}
+
+  &__step {}
+
+  &__step-1 {}
+
+  &__step-title {}
+
+  &__inputs {}
+
+  &__radio {}
+
+  &__radio-inp {}
+
+  &__radio-pseudo-inp {}
+
+  &__radio-label {}
+
+  &__step-2 {}
+
+  &__text {}
+
+  &__text-inp {}
+
+  &__text-label {}
+
+  &__step-3 {}
+
+  &__select {}
+
+  &__select-select {}
+
+  &__step-4 {}
+
+  &__extra-field {}
+
+  &__step-5 {}
+
+  &__final-step {}
+
+  &__form {
+    >.field {
+      &_name {}
+      &_tel {}
+    }
+    .field {
+      &__text {}
+      &__inp {}
+    }
+    >.form-bottom {}
+    .check {
+      &__inp {}
+      &__pseudo-inp {}
+      &__text {}
+      &__link {}
+    }
+    .btn {}
+  }
+
+  &__footer {}
+
+  &__next {}
+}

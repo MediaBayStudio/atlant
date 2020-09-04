@@ -2,3 +2,21 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.list-sect {
+  &__title {
+  }
+  &__list-wrapper {
+  }
+  &__list-title {
+  }
+  &__list {
+  }
+  &__list-item {
+    &::before {
+      
+    }
+  }
+}
+.container {
+}

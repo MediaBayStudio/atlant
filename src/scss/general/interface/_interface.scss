@@ -8,8 +8,11 @@ a[href="#"] {
   pointer-events: none;
 }
 
-body.no-scroll {
-  overflow: hidden;
+body {
+  background: $background;
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 // img.lazy {
@@ -49,7 +52,10 @@ body.no-scroll {
 
   }
   &-title {
-
+    font: 500 18px/133% Ubuntu;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
   }
   &-descr {
 
@@ -61,4 +67,61 @@ span.wpcf7-not-valid-tip,
 .screen-reader-response,
 .hidden {
   display: none !important;
+}
+
+.text_red {
+  color: $red;
+}
+
+.text_blue {
+  color: $blue;
+}
+
+.phones {
+  display: flex;
+  flex-flow: column;
+}
+
+.tel {
+  display: inline-block;
+  font: bold 32px/100% Ubuntu;
+  color: $black;
+  &-1 {
+    margin-bottom: 5px;
+  }
+  &__code {
+    padding-right: 5px;
+    font: 16px/150% Ubuntu;
+    vertical-align: super;
+    color: $red;
+  }
+  &__number {
+    transition: color .35s;
+  }
+  &__sign {
+    display: block;
+    font: 12px/200% Ubuntu;
+    text-align: right;
+    color: $dark;
+  }
+}
+
+.address,
+.email {
+  color: $black;
+  font: 16px/150% Ubuntu;
+}
+
+.email {
+  &__link {
+    color: $blue;
+    transition: color .35s;
+  }
+}
+
+[tabindex="-1"] {
+  cursor: default;
+  &:focus {
+    outline: 0;
+  }
 }

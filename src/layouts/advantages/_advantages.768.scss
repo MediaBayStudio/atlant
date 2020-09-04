@@ -2,3 +2,26 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.advantages-sect {
+  &__title {
+  }
+}
+
+.advantages-sect_advantages {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  max-width: 100%;
+}
+
+.advantage {
+  max-width: 220px;
+  &__text-top {
+  }
+  &__number {
+    font-size: 85px;
+  }
+  &__text-bottom {
+  }
+}

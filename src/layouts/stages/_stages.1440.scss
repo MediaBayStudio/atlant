@@ -2,3 +2,94 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.stages-sect {
+
+  &__title {
+
+  }
+  &__subtitle {
+
+  }
+  &__stages {
+
+  }
+}
+
+
+
+.stages_circle {
+  grid-template-rows: 1fr auto auto;
+  grid-template-columns: auto 30px 1fr 30px auto;
+  &.childs-3 {
+    > .stage {
+      &-1 {
+        grid-row: 1;
+        grid-column: 5;
+        text-align: left;
+      }
+      &-2 {
+        grid-row: 3;
+        grid-column: 3;
+        text-align: center;
+      }
+      &-3 {
+        grid-row: 1;
+        grid-column: 1;
+      }
+    }
+  }
+  > .stage {
+
+    > .stage__number {
+
+    }
+    > .stage__title {
+
+    }
+    > .stage__descr {
+
+    }
+  }
+}
+
+.stages {
+  &__figure {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 100%;
+    grid-row: 1/span 2;
+    grid-column: 3;
+    width: 480px;
+    height: 480px;
+  }
+  &__img {
+    grid-row: 1;
+    grid-column: 1;
+    justify-self: center;
+    align-self: center;
+    opacity: 0;
+    transition: opacity .5s;
+    &.img-0 {
+      opacity: 1;
+    }
+  }
+}
+
+
+
+.stages_numbers {
+
+  > .stage {
+
+    > .stage__number {
+
+    }
+    > .stage__title {
+
+    }
+    > .stage__descr {
+
+    }
+  }
+}

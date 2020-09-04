@@ -2,3 +2,16 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.links-sect {
+  &__title {
+  }
+  &__links {
+    padding: 0 165px;
+  }
+}
+
+.links {
+  &__link {
+  }
+}

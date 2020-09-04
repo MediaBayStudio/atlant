@@ -2,3 +2,136 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.hdr {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  &__logo {
+    flex-shrink: 0;
+  }
+  &__logo-img {
+    width: 224px;
+    height: 63px;
+    flex-shrink: 0;
+  }
+  &__burger {
+    &-box {
+
+    }
+    &-inner {
+
+    }
+  }
+  &__buttons {
+    margin: 25px auto 0;
+    width: 100%;
+    max-width: 375px;
+    font: 14px/114% Ubuntu;
+    color: $blue;
+    fill: $white;
+  }
+}
+
+.hdr__nav,
+.hdr__logo-img_vertical,
+.hdr__contacts,
+.breadcrumbs {
+  display: none;
+}
+
+.hdr__callback,
+.hdr__whatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  background: $btn_light;
+  border-radius: 40px;
+  transition: fill .35s, color .35s;
+  &-img {
+    margin-right: 15px;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+}
+
+.hdr__whatsapp {
+  margin-top: 15px;
+}
+
+.hdr__burger {
+  // margin: 0 0 0 auto;
+  margin: 10px 0 0 auto;
+  display: inline-flex;
+  transition: opacity .15s linear;
+  background: 0 0;
+  border: 0;
+  overflow: visible;
+  transition: transform .5s;
+  z-index: 1;
+  &-box {
+    display: inline-block;
+    flex-shrink: 0;
+    width: 25px;
+    height: 18px;
+    position: relative;
+  }
+  &-inner {
+    margin-top: -2px;
+    display: block;
+    width: 100%;
+    height: calc(4 / 24 * 100%);
+    position: absolute;
+    bottom: 0;
+    background: $medium_gray;
+    transition: background-color 0s 0.13s linear, bottom .5s;
+    border-radius: 2px;
+    &::after,
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: $medium_gray;
+      border-radius: inherit;
+    }
+    &::after {
+      bottom: -250.8%;
+      top: -515.6%;
+      transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    &::before {
+      background: $medium_gray;
+      top: -250.8%;
+      transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+  }
+  &.active {
+    .hdr__burger-inner {
+      bottom: 100%;
+      transition-delay: 0.22s;
+      background-color: transparent !important;
+      background: 0 0;
+      &::before {
+        // top: -500%;
+        top: 0;
+        transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: translate3d(0, 10px, 0) rotate(45deg);
+      }
+      &::after {
+        // top: -500%;
+        top: 0;
+        transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transform: translate3d(0, 10px, 0) rotate(-45deg);
+      }
+    }
+  }
+}

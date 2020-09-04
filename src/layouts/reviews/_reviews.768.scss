@@ -2,3 +2,38 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.reviews-sect {
+
+  &__reviews-block {
+    padding: 70px 65px;
+    &::before {
+      font-size: 350px;
+      top: 50%;
+    }
+  }
+}
+
+
+.reviews-block {
+  &__title {
+    margin-bottom: 30px;
+    max-width: 570px;
+  }
+  &__number-wrap {
+    font-size: 30px;
+  }
+  &__span {
+
+  }
+  &__number {
+    font-size: 150px;
+  }
+  &__who {
+
+  }
+  &__link {
+    width: 340px;
+    height: 64px;
+  }
+}

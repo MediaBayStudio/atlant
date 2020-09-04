@@ -2,3 +2,28 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.list-sect {
+  &__title {
+  }
+  &__list-wrapper {
+    max-width: 1020px;
+    margin: 0 auto;
+  }
+  &__list-title {
+  }
+  &__list {
+  }
+  &__list-item {
+    // padding-right: 40px;
+    padding-right: 0;
+    &::before {
+      
+    }
+    &:nth-child(2n+2) {
+
+    }
+  }
+}
+.container {
+}

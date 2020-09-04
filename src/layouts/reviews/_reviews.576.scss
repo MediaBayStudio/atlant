@@ -2,3 +2,37 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.reviews-sect {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  &__reviews-block {
+    width: 100%;
+    margin-left: 0;
+    &::before {
+      top: 60%;
+    } 
+  }
+}
+
+
+.reviews-block {
+  &__title {
+    max-width: 470px;
+  }
+  &__number-wrap {
+
+  }
+  &__span {
+
+  }
+  &__number {
+
+  }
+  &__who {
+
+  }
+  &__link {
+
+  }
+}

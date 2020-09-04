@@ -2,3 +2,163 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.hero-sect {
+  // padding: 0;
+  padding-bottom: 35px;
+  font: 14px/143% Ubuntu;
+  overflow: hidden;
+
+  &__slider {
+    color: $white;
+    width: 100vw;
+    margin-left: -15px;
+  }
+
+  &__slide {
+    padding: 45px 15px 60px;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    background: url(#) center/cover no-repeat;
+    &.slick-slide {
+    }
+  }
+  &__dots {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+  }
+  &__arrows {
+    display: none;
+  }
+
+  &__heading {
+    margin: 0 auto 25px;
+    width: 280px;
+    text-align: center;
+    text-transform: uppercase;
+    font: bolder 22px/145% IntroBlack;
+  }
+
+  &__title {
+    // margin-bottom: 75px;
+    margin-bottom: auto;
+    padding-bottom: 40px;
+    max-width: 290px;
+    font: bold 22px/145% IntroBlack;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  &__subtitle {
+    margin-bottom: 35px;
+    width: 295px;
+    font: 500 18px/134% Ubuntu;
+    text-transform: uppercase;
+    // letter-spacing: 0.02em;
+  }
+
+  &__list {
+    &[data-title] {
+      &::before {
+        content: attr(data-title);
+        display: block;
+        font: inherit;
+        margin-bottom: 20px;
+      }
+    }
+    &-item {
+      margin-bottom: 20px;
+      &.last {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+  &__sublist {
+    &-item {
+      max-width: 250px;
+      display: flex;
+      margin-bottom: 20px;
+      &.last {
+        margin-bottom: 0;
+      }
+      &::before {
+        content: '';
+        margin: 8px 15px 0 0;
+        width: 24px;
+        height: 2px;
+        flex-shrink: 0;
+        font: inherit;
+        background: $sand;
+      }
+    }
+  }
+
+  &__comment {
+    margin: 20px 0 0 39px;
+  }
+
+  &__link {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 56px;
+    font: 500 14px/100% Ubuntu;
+    color: $blue;
+    text-transform: uppercase;
+    background: $white;
+    border-radius: 3px;
+  }
+
+  &__form-wrapper {
+    width: 100vw;
+    margin-left: -15px;
+    padding: 20px 15px 20px;
+    background: $white;
+    color: $black;
+    position: relative;
+  }
+  &__sign {
+    display: flex;
+    flex-flow: column;
+    color: $black;
+    font-size: 17px;
+    line-height: 141%;
+  }
+  &__form {
+    max-width: 475px;
+    margin: 25px auto 35px;
+    > .field {
+      width: 100%;
+      &_name {
+        margin-bottom: 35px;
+      }
+      &_tel {
+        margin-bottom: 35px;
+      }
+    }
+    .field__text {
+      &.required {
+
+      }
+    }
+    .field__inp {
+      width: 100%;
+    }
+    > .form-bottom {
+      width: 280px;
+      margin: 0 auto;
+    }
+    .check {
+      margin-bottom: 30px;
+    }
+    .btn {
+      width: 280px;
+      height: 55px;
+    }
+  }
+}

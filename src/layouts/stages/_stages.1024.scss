@@ -2,3 +2,48 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.stages-sect {
+
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__subtitle {
+
+  }
+  &__stages {
+
+  }
+}
+
+.stages_circle {
+  grid-template-columns: 44% 12% 44%;
+  > .stage {
+
+    > .stage__number {
+
+    }
+    > .stage__title {
+
+    }
+    > .stage__descr {
+
+    }
+  }
+}
+
+.stages_numbers {
+
+  > .stage {
+
+    > .stage__number {
+
+    }
+    > .stage__title {
+
+    }
+    > .stage__descr {
+
+    }
+  }
+}

@@ -2,3 +2,35 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.reviews-sect {
+
+  &__reviews-block {
+
+    &::before {
+
+    }
+  }
+}
+
+
+.reviews-block {
+  &__title {
+    max-width: 700px;
+  }
+  &__number-wrap {
+
+  }
+  &__span {
+    margin-bottom: 21px;
+  }
+  &__number {
+
+  }
+  &__who {
+    margin-bottom: -31px;
+  }
+  &__link {
+
+  }
+}

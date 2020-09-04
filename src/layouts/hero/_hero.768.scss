@@ -2,3 +2,120 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.hero-sect {
+  font-size: 24px;
+  &__slider {
+    position: relative;
+  }
+  &__slide {
+    padding: 50px 80px;
+  }
+  &__arrows {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    fill: $white;
+  }
+  &__prev,
+  &__next {
+    display: flex;
+  }
+  &__prev {
+    > .arrow__svg {
+      transform: rotate(180deg);
+    }
+  }
+  &__heading {
+    margin: 35px auto 30px;
+    width: 100%;
+    font-size: 55px;
+  }
+  &__title {
+    max-width: 540px;
+    font-size: 38px;
+  }
+  &__subtitle {
+    max-width: 530px;
+    font-size: 30px;
+    line-height: 140%;
+  }
+  &__list {
+  }
+  &__list-item {
+    
+    &.last {
+
+    }
+    &::before {
+    }
+  }
+
+  &__sublist {
+    &-item {
+      max-width: none;
+    }
+  }
+
+  &__link {
+    margin-top: 40px;
+    width: 240px;
+    height: 64px;
+  }
+
+  &__form-wrapper {
+    // padding: 40px 60px 80px;
+    padding: 25px 60px;
+  }
+  &__sign {
+    // margin-bottom: 35px;
+    font-size: 24px;
+  }
+  &__form {
+    margin: 35px auto 50px;
+    max-width: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    > .field {  
+      width: 270px;
+      font-size: 18px;
+      &_name {
+        margin-bottom: 50px;
+
+      }
+      &_tel {
+        margin-bottom: 50px;
+      }
+    }
+    .field__text {
+      &.required {
+
+      }
+    }
+    .field__inp {
+
+    }
+    > .form-bottom {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-flow: row;
+    }
+    .check {
+      margin: 0;
+    }
+    .btn {
+      margin: 0 0 0 auto;
+      width: 270px;
+      height: 70px;
+      font-size: 16px;
+    }
+  }
+}

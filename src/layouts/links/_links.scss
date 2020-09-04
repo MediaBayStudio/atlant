@@ -2,3 +2,24 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.links-sect {
+  padding-top: 35px;
+  padding-bottom: 15px;
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__links {
+    font: 500 14px/143% Ubuntu;
+    text-align: center;
+    text-transform: uppercase;
+    color: $blue;
+  }
+}
+
+.links {
+  &__link {
+    display: block;
+    margin-bottom: 15px;
+  }
+}

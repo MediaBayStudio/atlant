@@ -2,3 +2,19 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.hdr {
+  &__contacts {
+    display: block;
+  }
+  &__address,
+  &__email {
+    display: none;
+  }
+  &__buttons {
+    order: 9;
+  }
+  &__whatsapp {
+    margin-top: 25px;
+  }
+}

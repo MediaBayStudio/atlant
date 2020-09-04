@@ -2,3 +2,16 @@
 @import '../../assets/colors';
 @import '../../assets/mixins';
 @import '../../assets/variables';
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $blue;
+  border-radius: 3px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+  font: 500 14px/100% Ubuntu;
+  text-transform: uppercase;
+  color: $white;
+  transition: background .5s;
+}

@@ -67,6 +67,10 @@ function enqueue_style( $style_name, $widths ) {
     foreach ( $widths as $width ) {
       if ( $width !== "0" ) {
         $media = $width - 0.02;
+        // если размер файла равен 0, то не подключаем его
+        if (filesize(get_template_directory() . '/css/' . $style_name . '.' . $width . '.css') === 0) {
+          continue;
+        }
       wp_enqueue_style( "{$style_name}-{$width}px", get_template_directory_uri() . "/css/{$style_name}.{$width}.css", [], null, "(min-width: {$media}px)" );
       } else {
         wp_enqueue_style( "{$style_name}-page", get_template_directory_uri() . "/css/{$style_name}.css", [], null );
@@ -100,6 +104,7 @@ add_action( 'wp_enqueue_scripts', function() {
 			'MobileMenu.min',
 			'Popup.min',
 			'svg4everybody.min',
+      'tail.select.min',
 			'main'
 		];
 
@@ -129,6 +134,7 @@ add_action( 'wp_enqueue_scripts', function() {
 			'MobileMenu.min',
 			'Popup.min',
 			'svg4everybody.min',
+      'tail.select.min',
 			'main'
 		];
 
@@ -158,11 +164,13 @@ add_action( 'wp_enqueue_scripts', function() {
 
   add_action( 'admin_init', function() {
     $options = [
-      'tel'     =>  'Телефон',
+      'tel_people'     =>  'Телефон для физ. лиц',
+      'tel_company'     =>  'Телефон для юр. лиц',
       'address' =>  'Адрес',
       'email'   =>  'E-mail',
       'coords'  =>  'Координаты маркера на карте',
-      'zoom'    =>  'Увеличение карты'
+      'zoom'    =>  'Увеличение карты',
+      'whatsapp' => 'WhatsApp'
     ];
 
     foreach ($options as $id => $name) {
@@ -185,6 +193,9 @@ add_action( 'wp_enqueue_scripts', function() {
 // добавить класс для ссылки в меню (a)
   add_filter( 'nav_menu_link_attributes', function( $atts, $item ) {
     $atts['class'] = 'nav__link';
+    if ( $atts['href'][0] === '#' ) {
+      $atts['tabindex'] = '-1';
+    }
     return $atts;
   }, 10, 2);  
 
@@ -195,6 +206,10 @@ add_action( 'wp_enqueue_scripts', function() {
     foreach ( $classes as $class ) {
       if ( $class === 'current-menu-item' ) {
         $classesArray[] = 'current';
+      } else if ( $class === 'menu-item-has-children' ) {
+        $classesArray[] = 'contains-submenu';
+      } else if ( $class === 'submenu-title' ) {
+        $classesArray[] = $class;
       }
     }
     return $classesArray;

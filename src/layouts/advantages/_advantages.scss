@@ -2,3 +2,34 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.advantages-sect {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  color: $black;
+  &__title {
+    margin-bottom: 55px;
+  }
+}
+
+.advantages-sect_advantages {
+  max-width: 195px;
+  margin: auto;
+  font: 500 14px/143% Ubuntu;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.advantage {
+  margin-bottom: 50px;
+  display: flex;
+  flex-flow: column;
+  &__text-top {
+  }
+  &__number {
+    font: 300 76px/100% Ubuntu;
+    color: $red;
+  }
+  &__text-bottom {
+  }
+}

@@ -2,3 +2,22 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.advantages-sect {
+  &__title {
+  }
+}
+
+.advantages-sect_advantages {
+  padding: 0 110px;
+}
+
+.advantage {
+  max-width: none;
+  &__text-top {
+  }
+  &__number {
+  }
+  &__text-bottom {
+  }
+}

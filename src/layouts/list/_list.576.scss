@@ -2,3 +2,24 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.list-sect {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  &__title {
+  }
+  &__list-wrapper {
+  }
+  &__list-title {
+  }
+  &__list {
+    font-size: 15px;
+  }
+  &__list-item {
+    &::before {
+      
+    }
+  }
+}
+.container {
+}

@@ -1,4 +1,7 @@
 <?php
+/*
+Template name: Контакты
+*/
 get_header();
 
 require 'layouts/contacts-hero/contacts-hero.php';

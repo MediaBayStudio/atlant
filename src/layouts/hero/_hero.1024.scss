@@ -2,3 +2,109 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.hero-sect {
+
+  &__slider {
+  }
+  &__slide {
+
+  }
+  &__title {
+
+
+  }
+  &__subtitle {
+
+
+
+  }
+  &__list {
+  }
+  &__list-item {
+
+    &.last {
+
+    }
+  }
+
+  &__sublist {
+    &-item {
+      &::before {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  &__text-block {
+    display: flex;
+    // flex-wrap: wrap;
+    &.contains-comment-link {
+      flex-wrap: wrap;
+      > .hero-sect__link-block {
+        margin: 40px 0 0 29px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+  }
+
+  &__link-block {
+    align-self: flex-end;
+  }
+
+  &__comment {
+    margin: 0 0 0 30px;
+    // margin: 30px 0 0;
+    // width: 450px;
+  }
+
+  &__link {
+    margin: 20px 0 0 30px;
+    flex-shrink: 0;
+    align-self: flex-end;
+  }
+
+  &__form-wrapper {
+    padding: 30px 80px;
+    // padding: 60px 80px 80px;
+  }
+  &__sign {
+    // margin-bottom: 40px;
+    max-width: 65%;
+    flex-flow: row wrap;
+    > .text_red,
+    > .text_blue {
+      margin-right: 8px;
+    }
+  }
+  &__form {
+    margin: 40px auto 50px;
+    max-width: 960px;
+    > .field {  
+      width: 360px;
+      &_name {
+        margin-bottom: 40px;
+      }
+      &_tel {
+        margin-bottom: 40px;
+      }
+    }
+    .field__text {
+      &.required {
+
+      }
+    }
+    .field__inp {
+
+    }
+    > .form-bottom {
+    }
+    .check {
+    }
+    .btn {
+      width: 360px;
+    }
+  }
+}

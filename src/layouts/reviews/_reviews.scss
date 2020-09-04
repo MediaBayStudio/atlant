@@ -2,3 +2,71 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.reviews-sect {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  color: $black;
+  &__reviews-block {
+    width: 100vw;
+    margin-left: -15px;
+    padding: 35px 15px;
+    background: $white;
+    overflow: hidden;
+    position: relative;
+    &::before {
+      content: attr(data-text);
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font: bolder 230px/100% IntroBlack;
+      text-transform: uppercase;
+      text-align: center;
+      color: $background;
+      z-index: 0;
+      pointer-events: none;
+    }
+  }
+}
+
+
+.reviews-block {
+  &__title {
+    max-width: 290px;
+    margin: 0 auto 10px;
+    position: relative;
+    z-index: 1;
+  }
+  &__number-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font: 500 12px/100% Ubuntu;
+  }
+  &__span {
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+  }
+  &__number {
+    margin: 0 10px 0 15px;
+    position: relative;
+    font: bolder 72px/100% IntroBlack;
+    color: $red;
+    z-index: 1;
+  }
+  &__who {
+    margin-bottom: -15px;
+    position: relative;
+    z-index: 1;
+  }
+  &__link {
+    margin: 25px auto 0;
+    width: 290px;
+    height: 56px;
+    position: relative;
+    z-index: 1;
+  }
+}

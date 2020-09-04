@@ -21,7 +21,7 @@
       },
       messages: {
         'user-name': {
-          required: 'Укажите имя',
+          required: 'Укажите полное имя',
           minlength: jQuery.validator.format('Имя не может быть таким коротким'),
           userName: 'Допустимы только буквы'
         },
@@ -32,16 +32,16 @@
         'user-email': {
           email: 'Укажите верный E-mail'
         },
-        'privacy-policy': {
-          required: 'Согласитель с политикой обработки персональных данных'
+        'policy': {
+          required: 'Согласитель с условиями политики конфиденциальности'
         }
       },
-      onfocusout: false,
+      // onfocusout: false,
       errorClass: 'invalid',
       submitHandler: function(form, event) {
         event.preventDefault();
 
-        $(form).find('input, textarea').removeClass('filled');
+        $(form).find('.field__inp, .field__textarea').removeClass('filled');
         
         $(this)[0].resetForm();
       
@@ -51,20 +51,39 @@
 
     // form beforesubmit validate
     $('form .btn').on('click', function() {
-      if (!$(event.target).parents('form').valid()) {
+      let parentForm = $(event.target).parents('form');
+      if (!parentForm.valid()) {
         event.preventDefault();
+
+      // ищем лэйблы, ипнуты в которых содержат ошибку
+      parentForm.find('.field__inp.invalid, .field__textarea.invalid')
+                .parents('label')
+                .addClass('error');
       }
     });
 
   })();
 
 
-  $('.field__inp').on('input', function() {
-    if ($(this).val() !== '') {
-      $(this).addClass('filled');
+  $('.field__inp, .field__textarea').on('input', function() {
+
+    let thisInput = $(this);
+
+    if (thisInput.val() !== '') {
+      thisInput.addClass('filled');
     } else {
-      $(this).removeClass('filled');
+      thisInput.removeClass('filled');
     }
+
+    if (thisInput.hasClass('invalid')) {
+      thisInput.parents('.field')
+               .addClass('error');
+    } else {
+      thisInput.parents('.field')
+               .removeClass('error');
+    }
+             
+
   });
 
   $.validator.methods.userName = function(value, element) {

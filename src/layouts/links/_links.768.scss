@@ -2,3 +2,28 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.links-sect {
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    text-align: left;
+    // column-count: 2;
+    // white-space: nowrap;
+    // column-gap: 30%;
+    &-wrapper {
+      display: flex;
+      flex-flow: column;
+    }
+  }
+}
+
+.links {
+  &__link {
+    margin-bottom: 20px;
+  }
+}

@@ -2,3 +2,85 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.hero-sect {
+
+  &__slider {
+  }
+  &__slide {
+  }
+  &__title {
+    max-width: 890px;
+  }
+  &__subtitle {
+    margin-bottom: 40px;
+    max-width: 890px;
+  }
+  &__list {
+    // column-count: 2;
+  }
+  &__list-item {
+    // break-inside: avoid;
+    &.last {
+    }
+    &::before {
+    }
+  }
+
+   &__text-block {
+    &.contains-comment-link {
+      flex-wrap: nowrap;
+      > .hero-sect__link-block {
+        display: block;
+        width: auto;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &__link {
+    margin-top: 30px;
+  }
+
+  &__form-wrapper {
+    padding: 40px 80px;
+  }
+  &__sign {
+    max-width: 80%;
+    // margin-bottom: 40px;
+    > .text_red,
+    > .text_blue {
+      margin-right: 8px;
+    }
+  }
+  &__form {
+    > .field {  
+      width: 450px;
+      &_name {
+
+      }
+      &_tel {
+
+      }
+    }
+    .field__text {
+      &.required {
+
+      }
+    }
+    .field__inp {
+
+    }
+    > .form-bottom {
+    }
+    .check {
+      // max-width: 450px;
+      > .check__pseudo-inp {
+        // margin-top: 0;
+      }
+    }
+    .btn {
+      width: 450px;
+    }
+  }
+}

@@ -2,3 +2,30 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.list-sect {
+
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__list-wrapper {
+  }
+  &__list-title {
+    margin-bottom: 30px;
+  }
+  &__list {
+    font-size: 16px;
+    column-count: 2;
+    column-gap: 20px;
+  }
+  &__list-item {
+    break-inside: avoid;
+    margin-bottom: 25px;
+    &::before {
+      width: 40px;
+      margin-right: 20px;
+    }
+  }
+}
+.container {
+}

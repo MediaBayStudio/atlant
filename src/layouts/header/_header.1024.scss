@@ -2,3 +2,129 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.hdr {
+  padding-top: 0;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    background: $white;
+    z-index: -1;
+  }
+  &__burger {
+    display: none;
+  }
+  &__logo {
+    margin-top: -15px;
+  }
+  &__logo-img {
+    display: block;
+    width: 240px;
+    height: 67px;
+    &_vertical {
+      display: none;
+    }
+  }
+  &__nav {
+    margin: 0 0 25px;
+    display: block;
+    width: 100%;
+    font: 14px/100% Ubuntu;
+    text-transform: uppercase;
+    color: $blue;
+    &-list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      > .nav__list-item {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom-color .35s, color .35s;
+        position: relative;
+        &.contains-submenu {
+          &::after {
+            content: '';
+            margin-left: 5px;
+            display: inline-block;
+            width: 7px;
+            height: 4px;
+            background: url('../img/caret.svg') center/contain no-repeat;
+            transition: transform .35s;
+          }
+        }
+        > .nav__link {
+          display: flex;
+          align-items: center;
+          padding: 0 10px;
+          height: 100%;
+        }
+        // Самое первое субменю у элемента шапки
+        > .sub-menu {
+          min-width: calc(100% + 60px);
+          padding: 30px 60px 30px;
+          position: absolute;
+          left: -30px;
+          top: calc(100% + 1px);
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity .35s;
+          background: $white;
+          color: $blue;
+          text-transform: none;
+          white-space: nowrap;
+          > .nav__list-item {
+            margin-bottom: 10px;
+            // Кредитование физ. лиц
+            &.submenu-title {
+              cursor: default;
+              > .nav__link {
+                color: $black !important;
+                // outline: 0 !important;
+                font: 20px/133% Ubuntu;
+              }
+              // Подменю с разделами "под залог", "без залога" и т.д.
+              > .sub-menu {
+                // margin-top: 20px;
+                display: flex;
+                flex-wrap: wrap;
+                // Подзаголовок "без залога" и т.д.
+                > .nav__list-item > .nav__link {
+                  font: 500 16px/133% Ubuntu;
+                  color: $dark;
+                  text-transform: uppercase;
+                }
+                > .contains-submenu {
+                  margin-top: 18px;
+                  // Самое глубокое подменю
+                  > .sub-menu {
+                    > .nav__list-item {
+                      margin-top: 7.5px;
+                      color: $black;
+                    }
+                  }
+                }
+              }
+            }
+            .nav__link {
+              transition: color .35s;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__contacts {
+    margin: 0 60px 0 auto; 
+  }
+}
+
+.breadcrumbs {
+  margin-bottom: 35px;
+}

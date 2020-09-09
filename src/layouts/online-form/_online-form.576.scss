@@ -2,3 +2,20 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.form-block {
+  margin: 50px 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  &__title {
+    margin-bottom: 40px;
+    max-width: none;
+    font-size: 22px;
+  }
+  &__title-first-row {
+  }
+  &__title-second-row {
+  }
+  &__link {
+  }
+}

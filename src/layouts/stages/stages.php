@@ -27,9 +27,9 @@
   if ( $sect_style === 'Круг' ) : ?>
     <figure class="stages__figure"> <?php
       for ( $i = 0, $len = count( $images ); $i < $len; $i++ ) : ?>
-        <img src="<?php echo $images[$i] ?>" alt="#" class="stages__img img-<?php echo ($i + 1) ?>"> <?php
+        <img src="#" data-src="<?php echo $images[$i] ?>" alt="#" class="stages__img img-<?php echo ($i + 1) ?> lazy"> <?php
       endfor ?>
-      <img src="<?php echo $template_directory . '/img/steps.png' ?>" alt="#" class="stages__img img-0">
+      <img src="#" data-src="<?php echo $template_directory . '/img/steps-' . $len . '.png' ?>" alt="#" class="stages__img img-0 lazy">
     </figure> <?php
   endif ?>
   </div>

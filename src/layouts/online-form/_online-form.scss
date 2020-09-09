@@ -2,3 +2,30 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.form-block {
+  margin: 35px 0;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  background: $white;
+  &__title {
+    display: block;
+    margin: 0 auto 30px;
+    max-width: 265px;
+    font: 500 18px/133% Ubuntu;
+    text-transform: uppercase;
+    text-align: center;
+    color: $black;
+  }
+  &__title-first-row {
+    display: block;
+    color: $blue;
+  }
+  &__title-second-row {
+  }
+  &__link {
+    margin: auto;
+    width: 265px;
+    height: 56px;
+  }
+}

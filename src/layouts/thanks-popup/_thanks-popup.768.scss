@@ -2,3 +2,12 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.thanks {
+  &__content {
+    padding: 70px;
+  }
+  &__close {
+    margin: -50px -50px 30px auto;
+  }
+}

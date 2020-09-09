@@ -9,6 +9,7 @@
   &__subtitle {}
 
   &__quiz {
+    min-height: 605px;
     padding: 55px 60px 55px 80px;
     display: grid;
     grid-template-rows: auto auto 1fr;

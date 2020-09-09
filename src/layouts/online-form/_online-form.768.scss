@@ -2,3 +2,18 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.form-block {
+  &__title {
+    margin-bottom: 35px;
+    font-size: 30px;
+  }
+  &__title-first-row {
+  }
+  &__title-second-row {
+  }
+  &__link {
+    width: 330px;
+    height: 72px;
+  }
+}

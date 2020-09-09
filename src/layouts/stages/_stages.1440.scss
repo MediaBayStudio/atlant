@@ -39,6 +39,35 @@
       }
     }
   }
+  &.childs-5 {
+    > .stage {
+      &-1 {
+        grid-row: 1;
+        grid-column: 1;
+        // text-align: left;
+      }
+      &-2 {
+        grid-row: 1;
+        grid-column: 5;
+        text-align: left;
+      }
+      &-3 {
+        grid-row: 2;
+        grid-column: 5;
+        text-align: left;
+        // text-align: center;
+      }
+      &-4 {
+        grid-row: 3;
+        grid-column: 3;
+        text-align: center;
+      }
+      &-5 {
+        grid-row: 2;
+        grid-column: 1;
+      }
+    }
+  }
   > .stage {
 
     > .stage__number {

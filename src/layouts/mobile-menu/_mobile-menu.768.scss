@@ -2,3 +2,40 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.menu {
+  &__cnt {
+    padding: 50px 35px 7.05vh;
+    max-width: 425px;
+  }
+  &__logo {
+  }
+  &__logo-img {
+  }
+  &__buttons {
+  }
+  &__callback {
+  }
+  &__whatsapp {
+  }
+  &__phones {
+  }
+  &__email {
+  }
+  &__address {
+  }
+  &__link-geo {
+  }
+  &__link-mailto {
+  }
+  &__link-sitemap {
+  }
+}
+.callback-btn {
+  &__img {
+  }
+}
+.whatsapp-btn {
+  &__img {
+  }
+}

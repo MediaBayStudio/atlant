@@ -1,20 +1,27 @@
 (function() {
-  // thanksPopup = new Popup('.thanks-popup', {
-  //   closeButtons: '.thanks-popup__close'
-  // });
+  thanksPopup = new Popup('.thanks-popup', {
+    closeButtons: '.thanks-popup__close'
+  });
 
-  // thanksPopup.addEventListener('popupbeforeopen', function() {
-  //   clearTimeout(thanksPopupTimer);
-  // });
+  callbackPopup = new Popup('.callback-popup', {
+    openButtons: '.callback-btn',
+    closeButtons: '.callback-popup__close'
+  });
 
-// Закрытие всех попапов вместе с закрытием окна спасибо
-  // thanksPopup.addEventListener('popupbeforeclose', function() {
-  //   let otherPopups = [callbackPopup, orderPopup];
+  thanksPopup.addEventListener('popupbeforeopen', function() {
+    clearTimeout(thanksPopupTimer);
+  });
 
-  //   for (let i = 0; i < otherPopups.length; i++) {
-  //     if (otherPopups[i].classList.contains('active')) {
-  //       otherPopups[i].closePopup();
-  //     }
-  //   }
-  // });
+  // Закрытие всех попапов вместе с закрытием окна спасибо
+  thanksPopup.addEventListener('popupbeforeclose', function() {
+    let otherPopups = [callbackPopup];
+
+    for (let i = 0; i < otherPopups.length; i++) {
+      if (otherPopups[i].classList.contains('active')) {
+        otherPopups[i].closePopup();
+      }
+    }
+  });
+
+
 })()

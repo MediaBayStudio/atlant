@@ -2,3 +2,24 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.callback-form {
+  margin-top: 25px;
+  max-width: 780px;
+  > .field {
+    max-width: 360px;
+  }
+  >.field_name {
+
+  }
+  > .form-bottom {
+    justify-content: space-between;
+  }
+  .check {
+
+  }
+  .btn {
+    max-width: none;
+    width: 360px;
+  }
+}

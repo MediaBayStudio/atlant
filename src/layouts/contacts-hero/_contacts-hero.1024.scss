@@ -2,3 +2,41 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.contacts-sect {
+  &__title {
+  }
+  &__contacts {
+    flex-flow: column;
+    height: 400px;
+    justify-content: space-between;
+  }
+}
+
+#contacts-sect__map {
+  float: left;
+  width: 540px;
+  margin: 0 70px 0 0;
+}
+
+.contacts {
+  max-width: 255px;
+  margin: 0;
+  &__title {
+  }
+  &__address {
+  }
+  &__email {
+  }
+  &__phones {
+    margin-top: 50px;
+    > .tel-1 {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.contacts,
+.contacts__phones {
+  
+}

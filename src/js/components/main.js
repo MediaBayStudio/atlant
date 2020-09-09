@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let target = event.target,
       targetHref = target.getAttribute('href');
 
-    if (targetHref[0] === '#') {
+    if (target.tagName === 'A' && targetHref[0] === '#') {
       event.preventDefault();
     }
   });
@@ -40,5 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
 //=include sliders.js
 //=include telMask.js
 //=include quiz.js
+//=include contacts-map.js
 
 });

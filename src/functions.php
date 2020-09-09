@@ -111,7 +111,6 @@ add_action( 'wp_enqueue_scripts', function() {
   foreach ( $scripts as $script_name ) {
     wp_enqueue_script( "{$script_name}", get_template_directory_uri() . "/js/{$script_name}.js", [], null );
   }
-
   // Отключаем стандартные jquery, jquery-migrate
   // лучше подключать свой jquery
   wp_deregister_script( 'jquery-core' );
@@ -128,15 +127,15 @@ add_action( 'wp_enqueue_scripts', function() {
   add_filter('script_loader_tag',   function( $html, $handle ) {
 
     $defer_scripts = [
-				'slick.min',
-			'jquery.validate.min',
-			'lazy.min',
-			'MobileMenu.min',
-			'Popup.min',
-			'svg4everybody.min',
+      'slick.min',
+      'jquery.validate.min',
+      'lazy.min',
+      'MobileMenu.min',
+      'Popup.min',
+      'svg4everybody.min',
       'tail.select.min',
-			'main'
-		];
+      'main'
+    ];
 
     foreach( $defer_scripts as $id ) {
       if ( $id === $handle ) {
@@ -210,6 +209,8 @@ add_action( 'wp_enqueue_scripts', function() {
         $classesArray[] = 'contains-submenu';
       } else if ( $class === 'submenu-title' ) {
         $classesArray[] = $class;
+      } else if ( $class === 'disabled' ) {
+        $classesArray[] = 'disabled';
       }
     }
     return $classesArray;

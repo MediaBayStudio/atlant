@@ -2,3 +2,186 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.menu {
+  display: none;
+  // width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  height: calc(var(--vh, 1vh) * 100);
+  max-height: 100vh;
+  max-height: calc(var(--vh, 1vh) * 100);
+  height: 100vh;
+
+  // z-index: 2;
+  &.active {
+    display: inline-block;
+  }
+
+  &__cnt {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px 20px 7.05vh; // 40px на width: 320px;
+    background: $white;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 100%;
+  }
+
+  &__logo {}
+
+  &__logo-img {
+    width: 224px;
+    height: 63px;
+  }
+
+  &__buttons {
+    margin-top: 25px;
+    max-width: 350px;
+    width: 100%;
+    font: 14px/100% Ubuntu;
+    fill: $white;
+    color: $blue;
+  }
+
+  &__callback {}
+
+  &__whatsapp {
+    margin-top: 15px;
+  }
+
+  &__phones {
+    margin: 25px 0;
+  }
+
+  &__email {
+    margin: 0 0 30px;
+  }
+
+  &__address {
+    margin: 40px auto 0;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  &__link-geo,
+  &__link-mailto,
+  &__link-sitemap {
+    margin: 20px auto 0;
+  }
+}
+
+.menu__nav {
+  width: 100%;
+  font: 300 14px/140% Ubuntu;
+  text-transform: uppercase;
+  color: $black;
+
+  &-list {
+    >.nav__list-item {
+      display: flex;
+      flex-flow: column;
+      &:first-child {
+        border-top: 2px solid $light;
+      }
+      &:last-child {
+      }
+      &.contains-submenu {
+        transition: max-height .35s;
+        max-height: 58px;
+        overflow: hidden;
+        >.nav__link {
+          &::after {
+            content: '';
+            margin-left: 15px;
+            display: inline-block;
+            width: 7px;
+            height: 4px;
+            background: url('../img/caret.svg') center/contain no-repeat;
+            transition: transform .35s;
+          }
+          &.active {
+            border-bottom-color: $red;
+            color: $red;
+            &::after {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+
+      >.nav__link {
+        display: flex;
+        align-items: center;
+        padding: 17.5px 0;
+        height: 100%;
+        border-bottom: 2px solid $light;
+        transition: border-bottom-color .35s, color .35s;
+        font-weight: normal;
+        color: $blue;
+      }
+
+      // Самое первое субменю у элемента меню
+      >.sub-menu {
+        padding: 0 0 20px;
+        text-transform: none;
+        // transition: max-height .35s;
+        // max-height: 0;
+        // overflow: hidden;
+        >.nav__list-item {
+          margin-top: 17px;
+
+          // Кредитование физ. лиц
+          &.submenu-title {
+            >.nav__link {
+              font: 17px/133% Ubuntu;
+            }
+
+            // Подменю с разделами "под залог", "без залога" и т.д.
+            >.sub-menu {
+              // margin-top: 20px;
+              display: flex;
+              flex-wrap: wrap;
+
+              // Подзаголовок "без залога" и т.д.
+              >.nav__list-item {
+                color: $black;
+                >.nav__link {
+                  display: inline-block;
+                  margin-top: 15px;
+                }
+                &.contains-submenu {
+                  >.nav__link {
+                    font: 500 14px/133% Ubuntu;
+                    color: $dark;
+                    text-transform: uppercase;
+                  }
+                }
+              }
+
+              >.contains-submenu {
+                // margin-top: 15px;
+
+                // Самое глубокое подменю
+                >.sub-menu {
+                  >.nav__list-item {
+                    margin-top: 10px;
+                  }
+                }
+              }
+            }
+          }
+
+          .nav__link {
+            transition: color .35s;
+          }
+        }
+      }
+    }
+  }
+}

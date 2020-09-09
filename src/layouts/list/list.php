@@ -10,9 +10,11 @@
         <span class="list-sect__list-title"><?php echo $$list['list_title'] ?></span> <?php
         endif ?>
         <ul class="list-sect__list"> <?php
-          foreach ( $list['list'] as $list_item ) : ?>
-            <li class="list-sect__list-item"><?php echo $list_item['list_item'] ?></li> <?php
-          endforeach ?>
+        $list_items = $list['list'];
+        for ( $i = 0, $len = count( $list_items ); $i < $len; $i++ ) :
+          #$class = $i % 2 === 0 ? 'odd' : 'even' ?>
+          <li class="list-sect__list-item"><?php echo $list_items[$i]['list_item'] ?></li> <?php
+        endfor ?>
         </ul>
     </div> <?php
   endforeach ?>

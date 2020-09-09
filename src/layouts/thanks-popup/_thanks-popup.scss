@@ -2,3 +2,12 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.thanks-popup {
+  &__title {
+    color: $blue;
+  }
+  &__descr {
+    max-width: 220px;
+  }
+}

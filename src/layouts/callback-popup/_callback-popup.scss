@@ -1,0 +1,15 @@
+// assets import
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.callback-popup {
+  // opacity: 1;
+  // visibility: visible;
+  &__title {
+
+  }
+  &__descr {
+    max-width: 260px;
+  }
+}

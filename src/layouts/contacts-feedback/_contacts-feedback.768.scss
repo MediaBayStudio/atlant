@@ -2,3 +2,44 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.contacts-form {
+  max-width: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &-sect {
+    background: 0 0;
+  }
+  &-wrapper {
+    padding: 50px 60px;
+    background: $white;
+    box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+  &__title {
+    margin-bottom: 45px;
+    font-size: 38px;
+  }
+  > .field {
+    width: 270px;
+    &_name {}
+    &_tel {}
+    &_msg {
+      margin: 0;
+    }
+    > .field__textarea {
+
+    }
+  }
+  > .form-bottom {
+    margin: auto 0 -7px;
+    > .check {
+
+    }
+    > .btn {
+      width: 270px;
+      height: 72px;
+    }
+  }
+}

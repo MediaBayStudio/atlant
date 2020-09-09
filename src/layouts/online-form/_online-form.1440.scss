@@ -2,3 +2,19 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.form-block {
+  display: flex;
+  align-items: center;
+  &__title {
+    margin: 0;
+    text-align: left;
+  }
+  &__title-first-row {
+  }
+  &__title-second-row {
+  }
+  &__link {
+    margin: 0 0 0 auto;
+  }
+}

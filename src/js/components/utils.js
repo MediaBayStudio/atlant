@@ -3,6 +3,7 @@ let lazy,
   hdr,
   overlay,
   mask,
+  contactsMap,
   thanksPopup,
   thanksPopupTimer,
   // callbackPopup,
@@ -11,6 +12,7 @@ let lazy,
   body = document.body,
   currentSlug = body.dataset.post,
   templateDir = body.dataset.directory,
+  currentPostName = body.dataset.postName,
   // siteurl = dataset.siteurl,
   // mobileRegExp = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i,
   // mobile = mobileRegExp.test(navigator.userAgent),
@@ -23,12 +25,7 @@ let lazy,
     element = element || document.body;
     return toArray ? Array.prototype.slice.call(element.querySelectorAll(selectors)) : element.querySelectorAll(selectors);
   },
-  // showLoader = function() {
-  //   loader.classList.add('active');
-  // },
-  // hideLoader = function() {
-  //   loader.style.opacity = 0;
-  // },
+  reserQuiz,
   setVh = function() {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', vh + 'px');

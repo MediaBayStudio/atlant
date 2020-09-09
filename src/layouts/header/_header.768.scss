@@ -4,6 +4,11 @@
 @import '../../scss/assets/variables';
 
 .hdr {
+  &.fixed {
+    .hdr__contacts {
+      display: none;
+    }
+  }
   &__contacts {
     display: block;
   }

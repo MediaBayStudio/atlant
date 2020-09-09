@@ -2,3 +2,21 @@
 @import '../../assets/colors';
 @import '../../assets/mixins';
 @import '../../assets/variables';
+
+.popup {
+  &__content {
+    padding: 70px 30px;
+  }
+  &__close {
+    margin: -40px -5px 45px auto;
+  }
+  &__title {
+    font-size: 55px;
+  }
+  &__subtitle {
+    font-size: 30px;
+  }
+  &__descr {
+    font-size: 16px;
+  }
+}

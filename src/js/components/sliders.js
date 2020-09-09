@@ -21,6 +21,7 @@
       nextArrow: createArrow('hero-sect__next', arrowSvg),
       infinite: false,
       fade: true,
+      draggable: false,
       slide: '.hero-sect__slide',
       customPaging: function() {
         return dot;

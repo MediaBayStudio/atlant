@@ -3,14 +3,46 @@
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
 
+.disabled,
+.disabled > .nav__link {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 .hdr {
   width: 100%;
   padding-top: 15px;
   padding-bottom: 30px;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  // display: flex;
+  // align-items: center;
+  // flex-wrap: wrap;
   position: relative;
+  z-index: 2;
+  background: $background;
+  &.fixed {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: translateToBottom .5s;
+    .hdr__burger {
+      margin-top: 0;
+    }
+    .hdr__buttons {
+      display: none;
+    }
+    .hdr__logo-img {
+      width: 224px * 0.5;
+      height: 63px * 0.5;
+    }
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
   &__logo {
     flex-shrink: 0;
   }
@@ -44,23 +76,23 @@
   display: none;
 }
 
-.hdr__callback,
-.hdr__whatsapp {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 40px;
-  background: $btn_light;
-  border-radius: 40px;
-  transition: fill .35s, color .35s;
-  &-img {
-    margin-right: 15px;
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
-  }
-}
+// .hdr__callback,
+// .hdr__whatsapp {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   width: 100%;
+//   height: 40px;
+//   background: $btn_light;
+//   border-radius: 40px;
+//   transition: fill .35s, color .35s;
+//   &-img {
+//     margin-right: 15px;
+//     width: 16px;
+//     height: 16px;
+//     flex-shrink: 0;
+//   }
+// }
 
 .hdr__whatsapp {
   margin-top: 15px;

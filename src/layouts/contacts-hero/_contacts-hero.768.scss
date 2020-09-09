@@ -2,3 +2,35 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.contacts-sect {
+  &__title {
+    font-size: 55px;
+    text-align: left;
+  }
+  &__contacts {
+  }
+}
+
+#contacts-sect__map {
+  height: 400px;
+}
+
+.contacts {
+  max-width: 350px;
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__address {
+    margin-bottom: 15px;
+  }
+  &__email {
+  }
+  &__phones {
+  }
+}
+
+.contacts,
+.contacts__phones {
+  margin-top: 60px;
+}

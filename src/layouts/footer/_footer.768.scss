@@ -2,3 +2,70 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.ftr {
+  &__contacts {
+  }
+  &__logo {
+  }
+  &__logo-img {
+  }
+  &__address {
+    max-width: 340px;
+    font-size: 16px;
+  }
+  &__link-map,
+  &__link-mail,
+  &__link-sitemap {
+    font-size: 16px;
+  }
+  &__phones {
+    margin: 40px 0 0 0;
+    align-self: center;
+    grid-row: 5;
+  }
+  &__email {
+    margin: 40px 0 0 auto;
+    align-self: center;
+    grid-column: 2;
+  }
+  &__buttons {
+    max-width: 260px;
+  }
+  &__callback {
+  }
+  &__whatsapp {
+    margin-top: 25px;
+  }
+  &__copy {
+    font-size: 16px;
+    &::before {
+      // width: 90px;
+    }
+    &-text {
+      margin-right: 60px;
+    }
+  }
+}
+
+.tel {
+  &__code {
+  }
+  &__number {
+  }
+  &__sign {
+  }
+}
+
+.email {
+  &__link {
+  }
+}
+.callback-btn {
+  &__img {
+  }
+}
+.whatsapp-btn {
+  &__img {
+  }
+}

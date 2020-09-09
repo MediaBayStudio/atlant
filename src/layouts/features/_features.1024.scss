@@ -2,3 +2,39 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.features-sect {
+
+  &__title {
+    margin-bottom: 70px;
+    max-width: none;
+  }
+  &__features {
+
+  }
+}
+
+.feature {
+  max-width: 208.34px;
+  margin-top: 0;
+  &__img {
+
+  }
+  &__title {
+
+  }
+  &__descr {
+
+  }
+  &.odd {
+
+  }
+  &.even {
+    margin-right: auto;
+  }
+  &.feat-4,
+  &.feat-8,
+  &.feat-12 {
+    margin-right: -0;
+  }
+}

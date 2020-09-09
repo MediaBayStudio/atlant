@@ -15,9 +15,10 @@ body {
   }
 }
 
-// img.lazy {
-//   background: url('../img/img-placeholder.svg') center/cover no-repeat;
-// }
+[class*=website] {
+  display: none !important;
+  visibility: hidden !important;
+}
 
 #fake-scrollbar {
   display: none;
@@ -124,4 +125,40 @@ span.wpcf7-not-valid-tip,
   &:focus {
     outline: 0;
   }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  font: 300 14px/100% Ubuntu;
+  color: $dark;
+  border-bottom-color: $dark;
+  &__img {
+  }
+  &__text {
+    border-bottom: 1px solid;
+    border-bottom-color: inherit;
+    transition: border-bottom-color .35s;
+  }
+}
+
+.link__img,
+.callback-btn__img,
+.whatsapp-btn__img {
+  margin-right: 15px;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.callback-btn,
+.whatsapp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  background: $btn_light;
+  border-radius: 40px;
+  transition: fill .35s, color .35s;
 }

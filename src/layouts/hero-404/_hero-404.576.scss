@@ -2,3 +2,48 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.hero-404 {
+  &__content {
+    max-width: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: right;
+  }
+  &__suptitle {
+    max-width: 300px;
+    font-size: 15px;
+  }
+  &__heading {
+    margin: 0 0 45px auto;
+  }
+  &__small-title {
+    display: inline-block;
+    padding: 0 14px 5px;
+    font-size: 16px;
+  }
+  &__title {
+  }
+  &__descr {
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 20px;
+  }
+  &__blue-text {
+    width: 100%;
+    font-size: 25px;
+  }
+  &__link {
+    margin: 60px 0 35px auto;
+    width: 260px;
+    height: 72px;
+  }
+  &__sign {
+    width: 100%;
+    font-size: 16px;
+  }
+  &__sign-link {
+
+  }
+}

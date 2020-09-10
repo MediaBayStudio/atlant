@@ -37,6 +37,9 @@
     width: auto;
     max-width: 415px;
     font-size: 22px;
+    > .br:nth-child(2) {
+      display: block;
+    }
   }
   &__list {
   }

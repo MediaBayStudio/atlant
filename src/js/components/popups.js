@@ -8,10 +8,12 @@
     closeButtons: '.callback-popup__close'
   });
 
-  faqPopup = new Popup('#faq-popup', {
-    openButtons: '#opening-faq-popup-btn',
-    closeButtons: '.faq-popup__close'
-  });
+  if (id('faq-popup')) {
+    faqPopup = new Popup('#faq-popup', {
+      openButtons: '#opening-faq-popup-btn',
+      closeButtons: '.faq-popup__close'
+    });
+  }
 
   thanksPopup.addEventListener('popupbeforeopen', function() {
     clearTimeout(thanksPopupTimer);

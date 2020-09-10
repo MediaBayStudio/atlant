@@ -3,6 +3,7 @@
     $site_url,
     $template_directory,
     $is_front_page,
+    $is_404,
     $address,
     $phones,
     $phones_dry,
@@ -114,7 +115,7 @@
     # Мобильное меню
     require 'layouts/mobile-menu/mobile-menu.php' ?>
   </header> <?php
-  if ( !$is_front_page ) : ?>
+  if ( !$is_front_page && !$is_404 ) : ?>
   <div class="breadcrumbs container">
     <ul class="breadcrumbs__list">
       <li class="breadcrumbs__item">

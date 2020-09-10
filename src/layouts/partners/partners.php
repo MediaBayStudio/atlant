@@ -12,7 +12,7 @@
       for ( $i = 0, $len = count( $terms ); $i < $len; $i++ ) : 
         $term_title = $terms[$i]->name;
         $term_img = get_field( 'logo', $terms[$i] ) ?>
-        <img src="#" data-src="<?php echo $term_img ?>" alt="<?php echo $term_title ?>" class="partners__img lazy">
+        <img src="<?php echo $term_img ?>" alt="<?php echo $term_title ?>" class="partners__img">
       <?php
     endfor ?>
    </div> <?php

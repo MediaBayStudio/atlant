@@ -2,6 +2,7 @@
   $template_directory = get_template_directory_uri();
   $site_url = site_url();
   $is_front_page = is_front_page();
+  $is_404 = is_404();
   
   $address = get_option( 'contacts_address' );
   $tel_people = get_option( 'contacts_tel_people' );

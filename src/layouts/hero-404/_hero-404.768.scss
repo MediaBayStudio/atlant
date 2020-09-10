@@ -2,3 +2,33 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.hero-404 {
+  &__content {
+    padding: 0 45px;
+  }
+  &__suptitle {
+    font-size: 16px;
+  }
+  &__heading {
+  }
+  &__small-title {
+    padding: 0 18px 12px 0;
+    font-size: 18px;
+  }
+  &__title {
+    font-size: 144px;
+  }
+  &__descr {
+    font-size: 24px;
+  }
+  &__blue-text {
+    font-size: 30px;
+  }
+  &__link {
+  }
+  &__sign {
+  }
+  &__sign-link {
+  }
+}

@@ -62,7 +62,7 @@
 
         <div class="hero-sect__text-block<?php echo $contains_comment_class ?>"> <?php
 
-          if ( $list ) :
+          if ( $list[0]['list_item'] ) :
             if ( $list_title ) {
               $list_title = ' data-title="' . $list_title . '"';
             } ?>

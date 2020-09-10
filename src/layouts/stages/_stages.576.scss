@@ -15,6 +15,16 @@
   &__stages {
 
   }
+  &__footnote {
+    margin: 30px 0 50px;
+    &-title {
+      font-size: 20px;
+    }
+    &-descr {
+      margin-top: 0;
+      font-size: 20px;
+    }
+  }
 }
 
 .stages_circle {

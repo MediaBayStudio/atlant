@@ -2,3 +2,31 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.hero-404 {
+  &__content {
+    max-width: 570px;
+    flex-flow: row wrap;
+  }
+  &__suptitle {
+    margin: 0 0 35px;
+  }
+  &__heading {
+    margin-bottom: 50px;
+  }
+  &__small-title {
+  }
+  &__title {
+  }
+  &__descr {
+  }
+  &__blue-text {
+  }
+  &__link {
+    margin: 60px 0 30px auto;
+  }
+  &__sign {
+  }
+  &__sign-link {
+  }
+}

@@ -2,3 +2,50 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.hero-404 {
+  &__content {
+    max-width: 280px;
+    margin: 50px auto;
+    color: $black;
+    text-align: center;
+  }
+  &__suptitle {
+    font: 300 14px/143% Ubuntu;
+  }
+  &__heading {
+    margin: 25px 0 10px;
+    display: flex;
+    flex-flow: column;
+    text-transform: uppercase;
+    font: 900 120px/100% IntroBlack;
+  }
+  &__small-title {
+    color: $dark;
+    font: 500 14px/143% Ubuntu;
+  }
+  &__title {
+  }
+  &__descr {
+    font: 17px/141% Ubuntu;
+  }
+  &__blue-text {
+    margin-bottom: 5px;
+    font: 500 18px/133% Ubuntu;
+    text-transform: uppercase;
+    color: $blue;
+  }
+  &__link {
+    margin: 20px 0;
+    width: 100%;
+    height: 56px;
+  }
+  &__sign {
+    font: 300 14px/143% Ubuntu;
+  }
+  &__sign-link {
+    color: $dark;
+    border-bottom: 1px solid;
+    transition: border-bottom-color .35s;
+  }
+}

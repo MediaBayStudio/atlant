@@ -2,3 +2,35 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.hero-404 {
+  background: url('../img/404.png') center right 15% no-repeat content-box;
+  &__content {
+    margin: 75px auto 75px 0;
+    padding: 0;
+    max-width: 340px;
+    flex-flow: column;
+  }
+  &__suptitle {
+    margin: 0 0 20px auto;
+  }
+  &__heading {
+    margin: 0 0 20px auto;
+  }
+  &__small-title {
+    padding: 0 0 10px;
+  }
+  &__title {
+  }
+  &__descr {
+  }
+  &__blue-text {
+  }
+  &__link {
+    margin: 25px 0 30px auto;
+  }
+  &__sign {
+  }
+  &__sign-link {
+  }
+}

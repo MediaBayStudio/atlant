@@ -14,6 +14,14 @@
   &__stages {
 
   }
+  &__footnote {
+    &-title {
+      font-size: 24px;
+    }
+    &-descr {
+      font-size: 24px;
+    }
+  }
 }
 
 .stages_circle {
@@ -89,6 +97,17 @@
   > .stage-3,
   > .stage-6,
   > .stage-9 {
+    margin-right: 0;
+  }
+}
+
+.stages_numbers.childs-2 {
+  > .stage {
+    max-width: 320px;
+  }
+  > .stage-2,
+  > .stage-4,
+  > .stage-6 {
     margin-right: 0;
   }
 }

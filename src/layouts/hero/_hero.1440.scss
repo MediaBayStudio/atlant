@@ -10,11 +10,14 @@
   &__slide {
   }
   &__title {
-    max-width: 890px;
   }
   &__subtitle {
     margin-bottom: 40px;
-    max-width: 890px;
+    // max-width: 890px;
+    max-width: 720px;
+    > .br:nth-child(1) {
+      display: block;
+    }
   }
   &__list {
     // column-count: 2;

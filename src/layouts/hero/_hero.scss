@@ -57,6 +57,10 @@
     font: 500 18px/134% Ubuntu;
     text-transform: uppercase;
     // letter-spacing: 0.02em;
+    > .br:nth-child(1),
+    > .br:nth-child(2) {
+      display: none;
+    }
   }
 
   &__list {

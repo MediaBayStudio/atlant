@@ -80,11 +80,17 @@ li.slick-active > .dot,
 
 
 .arrow {
+  display: flex;
   // transition: opacity .35s, transform .35s;
-  transition: opacity .35s;
+  transition: opacity .35s, fill .35s;
   &.slick-disabled {
     opacity: 0.5;
     // transform: scale(.75);
+  }
+  &__prev {
+    > .arrow__svg {
+      transform: rotate(180deg);
+    }
   }
   &__svg {
     pointer-events: none;

@@ -1,11 +1,16 @@
 (function() {
-  thanksPopup = new Popup('.thanks-popup', {
+  thanksPopup = new Popup('#thanks-popup', {
     closeButtons: '.thanks-popup__close'
   });
 
-  callbackPopup = new Popup('.callback-popup', {
+  callbackPopup = new Popup('#callback-popup', {
     openButtons: '.callback-btn',
     closeButtons: '.callback-popup__close'
+  });
+
+  faqPopup = new Popup('#faq-popup', {
+    openButtons: '#opening-faq-popup-btn',
+    closeButtons: '.faq-popup__close'
   });
 
   thanksPopup.addEventListener('popupbeforeopen', function() {

@@ -1,0 +1,71 @@
+// assets import
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.side-menu {
+  &__nav {
+    display: block;
+    font: 16px/150% Ubuntu;
+  }
+
+  &__nav-list {
+    >.nav__list-item {
+
+      // Один список
+      &.contains-submenu {
+        margin-bottom: 50px;
+      }
+
+      // Ссылка-подзаголовок (Основные услуши)
+      &.contains-submenu>.nav__link {
+        font: 500 18px/133% Ubuntu;
+        text-transform: uppercase;
+        color: $dark;
+        pointer-events: none;
+      }
+
+      // Вложенный список ссылок
+      >.sub-menu {
+        margin-top: 15px;
+      }
+
+      // Элемент вложенного списка
+      >.sub-menu>.nav__list-item {
+        margin-bottom: 8px;
+      }
+
+      // Все ссылки
+      .nav__link {
+        transition: color .35s;
+      }
+
+      // Ссылка текущей страницы
+      .current {
+        display: flex;
+        align-items: center;
+        color: $blue;
+        &::before {
+          content: '';
+          margin-right: 10px;
+          display: inline-block;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: $light;
+        }
+      }
+
+    }
+
+    &__link {}
+  }
+}
+
+
+
+.contains-submenu {}
+
+.sub-menu {}
+
+.current {}

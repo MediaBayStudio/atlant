@@ -2,3 +2,44 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.partners-sect {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  overflow: hidden;
+  &__title {}
+}
+
+#partners {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.partners__img {
+  width: 170px;
+  object-fit: contain;
+  flex-shrink: 0;
+  // margin-right: responsive('320->575', '75->202');
+  margin-right: responsive('320->575', '35->100');
+  &.last {
+    // margin-right: 0;
+  }
+}
+
+.partners__nav {
+  display: none;
+}
+
+
+
+
+#partners.slick-slider {
+  > .partners__nav {
+    
+  }
+  > .slick-list {
+
+  }
+}

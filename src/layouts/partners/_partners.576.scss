@@ -2,3 +2,52 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.partners-sect {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  &__title {}
+}
+
+#partners {
+  
+}
+
+.partners__img {
+  margin-right: 35px;
+}
+
+.partners__nav {
+}
+
+.partners__prev,
+.partners__next {
+  > .arrow__svg {
+    width: 25px;
+    height: 48px;
+  }
+}
+
+
+#partners.slick-slider {
+  margin: 35px auto 0;
+  max-width: 170px * 2 + 35px;
+  // padding-left: 536px / 2 - (170px * 2 + 25px) / 2;
+  // размещаем по центру - ширина / 2
+  // и двигаем обратно на пол своей ширины
+  > .partners__nav {
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(100% + 100px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    order: 10;
+    fill: $light;
+  }
+  > .slick-list {
+    overflow: hidden;
+  }
+}

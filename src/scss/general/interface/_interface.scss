@@ -63,6 +63,14 @@ body {
   }
 }
 
+.page {
+  &-title {
+    font: bolder 22px/145% IntroBlack;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
 div.wpcf7-response-output,
 span.wpcf7-not-valid-tip,
 .screen-reader-response,

@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
 //=include sliders.js
 //=include telMask.js
 //=include quiz.js
+//=include dropdownText.js
 //=include contacts-map.js
 
 });

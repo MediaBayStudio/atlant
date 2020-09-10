@@ -1,4 +1,4 @@
-<section class="hero-sect container"> <?php
+<section class="hero-sect container" id="hero-sect__slider"> <?php
   $sect_title = $section['sect_title'];
   $slides = $section['slider'];
   $bottom_text = $section['bottom_text'];

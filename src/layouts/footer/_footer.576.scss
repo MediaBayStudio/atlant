@@ -10,6 +10,8 @@
     margin: 25px 0 0;
     width: 100%;
     display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto auto auto 1fr;
     order: 10;
   }
   &__logo {
@@ -33,29 +35,34 @@
     grid-column: 1;
   }
   &__link-mailto {
-    margin: 30px auto 0;
+    margin: 30px 0 0 100px;
     grid-row: 3;
     grid-column: 2;
   }
   &__link-sitemap {
-    margin: 30px auto 0;
+    margin: 30px 0 0 100px;
     grid-row: 4;
     grid-column: 2;
   }
   &__phones {
-    margin: 0;
+    // margin: 0;
+    margin: 25px 0 15px;
     width: 100%;
-    grid-row: 6;
+    grid-row: 5;
     grid-column: 1/span 2;
     flex-flow: row;
+    justify-content: space-between;
     > .tel-1 {
-      margin-right: 25px;
+      margin-right: 35px;
     }
   }
   &__email {
-    margin: 25px auto 20px 0;
-    grid-row: 5;
+    margin: 0;
+    // margin: 25px auto 20px 0;
+    grid-row: 6;
     grid-column: 1;
+    align-self: end;
+    text-align: left;
   }
   &__buttons {
     max-width: 250px;
@@ -67,6 +74,13 @@
   &__callback {
   }
   &__whatsapp {
+  }
+  &__dev {
+    margin: 0 0 0 auto;
+    // margin: 10px 0 0;
+    grid-row: 6;
+    grid-column: 2;
+    text-align: left;
   }
   &__copy {
     width: 100%;

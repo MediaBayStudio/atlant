@@ -2,3 +2,40 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+$btn_left_padding: 20px;
+$caret_width: 16px;
+$caret_margin_left: 15px;
+
+.faq-sect {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  &__title {
+  }
+  &__left {
+  }
+  &__btn {
+  }
+  &__right {
+    margin-top: 60px;
+  }
+}
+
+.faq {
+  margin-bottom: 30px;
+  font-size: 16px;
+  &__question {
+    font-size: 15px;
+    &-img {
+    }
+  }
+  &__answer {
+    padding-left: $btn_left_padding + $caret_width + $caret_margin_left;
+  }
+  &.active {
+    > .faq__question {
+      > .faq__question-img {
+      }
+    }
+  }
+}

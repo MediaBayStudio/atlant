@@ -1,4 +1,4 @@
-<div class="callback-popup popup container">
+<div class="callback-popup popup container" id="callback-popup">
   <div class="callback-popup__cnt popup__content">
     <button type="button" class="callback-popup__close popup__close">
       <svg class="close__icon">

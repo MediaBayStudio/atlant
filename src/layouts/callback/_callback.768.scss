@@ -18,7 +18,8 @@
   }
 }
 
-.callback-form {
+.callback-form,
+.faq-form {
   max-width: 580px;
   margin: auto;
   &-wrap {
@@ -33,6 +34,9 @@
   >.field_name {
     margin-right: 60px;
   }
+}
+
+.callback-form {
   > .form-bottom {
     margin-top: 40px;
     display: flex;
@@ -46,5 +50,14 @@
     margin: 0;
     width: 260px;
     height: 72px;
+  }
+}
+
+.faq-form {
+  > .form-bottom {
+    margin: auto 0 -6px auto;
+  }
+  .check {
+    margin: 0;
   }
 }

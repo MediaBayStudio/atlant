@@ -205,8 +205,9 @@ add_action( 'wp_enqueue_scripts', function() {
   add_action( 'after_setup_theme', function() {
     register_nav_menus( [
       'header_menu' =>  'Меню в шапке сайта',
-      'mobile_menu' =>  'Мобильное меню на сайте',
-      'footer_menu' =>  'Меню в подвале сайта'
+      'side_menu_in_page' => 'Боковое меню на некоторых страницах'
+      // 'mobile_menu' =>  'Мобильное меню на сайте',
+      // 'footer_menu' =>  'Меню в подвале сайта'
     ] );
   } );
 

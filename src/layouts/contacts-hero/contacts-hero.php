@@ -3,7 +3,7 @@ $coords = get_option('contacts_coords');
 $zoom = get_option('contacts_zoom') ?>
 
 <section class="contacts-sect container">
-  <h1 class="contacts-sect__title">Контактная информация</h1>
+  <h1 class="contacts-sect__title page-title">Контактная информация</h1>
   <div id="contacts-sect__map" data-coords="<?php echo $coords ?>" data-zoom="<?php echo $zoom ?>"></div>
   <div class="contacts-sect__contacts">
     <div class="contacts">

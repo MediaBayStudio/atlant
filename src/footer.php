@@ -70,7 +70,7 @@
     <!-- design logo -->
     <img src="#" data-src="<?php echo $template_directory ?>/img/design-logo.svg" alt="Логотип дизайнера" class="ftr__design lazy">
     <!-- dev logo -->
-    <div class="ftr__dev"><span>Разработка сайта — </span><a href="https://media-bay.ru/" rel="noopener noreferrer nofollow" target="_blank" title="Перейти на сайт разработчика" class="ftr__dev-link">media bay</a></div>
+    <div class="ftr__dev"><span>Разработка — </span><a href="https://media-bay.ru/" rel="noopener noreferrer nofollow" target="_blank" title="Перейти на сайт разработчика" class="ftr__dev-link">media bay</a></div>
   </div>
   <!-- copyright -->
   <span class="ftr__copy">
@@ -82,7 +82,6 @@ wp_footer();
 
 require 'layouts/mobile-menu/mobile-menu.php';
 require 'layouts/overlay/overlay.php';
-require 'layouts/faq-popup/faq-popup.php';
 require 'layouts/review-popup/review-popup.php';
 require 'layouts/callback-popup/callback-popup.php';
 require 'layouts/thanks-popup/thanks-popup.php' ?>

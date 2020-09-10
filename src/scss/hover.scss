@@ -4,9 +4,6 @@
 @import 'assets/variables';
 
 .hdr__nav-list {
-  > .nav__list-item:hover {
-    color: $red;
-  }
   > .nav__list-item.contains-submenu:hover {
     border-bottom-color: $red;
     &::after {
@@ -15,28 +12,13 @@
     > .sub-menu {
       opacity: 1;
       pointer-events: auto;
-      .nav__link:hover {
-        color: $red;
-      }
     }
   }
-  // > .nav__list-item.contains-submenu.hover {
-  //   border-bottom-color: $red;
-  //   &::after {
-  //     transform: rotate(180deg);
-  //   }
-  //   > .sub-menu {
-  //     opacity: 1;
-  //     pointer-events: auto;
-  //     .nav__link:hover {
-  //       color: $red;
-  //     }
-  //   }
-  // }
 }
 
-
-
+.hdr__nav-list > .nav__list-item.contains-submenu:hover > .sub-menu .nav__link:hover ,
+.hdr__nav-list > .nav__list-item:hover,
+.side-menu__nav .nav__link:hover,
 .tel:hover > .tel__number,
 .email__link:hover,
 .ftr__dev-link:hover {
@@ -106,6 +88,12 @@
   z-index: 1;
 }
 
-.popup__close:hover {
+.popup__close:hover,
+.arrow:hover {
   fill: $blue;
+}
+
+.faq__question:hover {
+  fill: $black;
+  color: $red;
 }

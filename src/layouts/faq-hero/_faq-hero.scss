@@ -2,3 +2,65 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+$btn_left_padding: 20px;
+$caret_width: 16px;
+$caret_margin_left: 15px;
+
+.faq-sect {
+  padding-top: 35px;
+  padding-bottom: 10px;
+  color: $black;
+  &__title {
+    margin-bottom: 25px;
+  }
+  &__left {
+  }
+  &__btn {
+    margin: 0 auto;
+    width: 270px;
+    height: 56px;
+  }
+  &__right {
+    margin-top: 40px;
+    font: 500 14px/143% Ubuntu;
+    fill: $white;
+  }
+}
+
+.faq {
+  margin-bottom: 25px;
+  overflow: hidden;
+  transition: max-height .5s;
+  &__question {
+    display: flex;
+    align-items: center;
+    padding: 15px $btn_left_padding;
+    text-align: left;
+    background: $light;
+    border-radius: 100px;
+    text-transform: uppercase;
+    transition: color .5s;
+    &-img {
+      margin-right: $caret_margin_left;
+      width: $caret_width;
+      height: 16px;
+      flex-shrink: 0;
+      pointer-events: none;
+      transition: fill .5s, transform .5s;
+    }
+  }
+  &__answer {
+    padding: 15px 0 10px;
+    font-weight: 300;
+  }
+  &.active {
+    > .faq__question {
+      color: $blue;
+      > .faq__question-img {
+        fill: $black;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

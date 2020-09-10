@@ -2,3 +2,38 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+$slide_margin_right: 60px;
+$slide_width: 180px;
+$visible_slides: 4;
+
+.partners-sect {
+  &__title {}
+}
+
+#partners {
+}
+
+.partners__img {
+  width: $slide_width;
+  margin-right: $slide_margin_right;
+}
+
+.partners__nav {
+}
+
+.partners__prev,
+.partners__next {
+  > .arrow__svg {
+  }
+}
+
+
+#partners.slick-slider {
+  max-width: $slide_width * $visible_slides + $slide_margin_right * ($visible_slides - 1);
+  > .partners__nav {
+  }
+  > .slick-list {
+
+  }
+}

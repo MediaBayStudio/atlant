@@ -2,3 +2,30 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.faq-sect {
+  grid-template-columns: 220px 100px 1fr;
+  &__title {
+  }
+  &__left {
+  }
+  &__btn {
+  }
+  &__right {
+  }
+}
+
+.faq {
+  &__question {
+    &-img {
+    }
+  }
+  &__answer {
+  }
+  &.active {
+    > .faq__question {
+      > .faq__question-img {
+      }
+    }
+  }
+}

@@ -14,20 +14,28 @@
     max-width: 340px;
     font-size: 16px;
   }
-  &__link-map,
-  &__link-mail,
+  &__link-geo,
+  &__link-mailto,
   &__link-sitemap {
     font-size: 16px;
+    white-space: nowrap;
   }
   &__phones {
     margin: 40px 0 0 0;
     align-self: center;
     grid-row: 5;
+    grid-column: 1;
+    > .tel-1 {
+      margin-right: 25px;
+    }
   }
   &__email {
-    margin: 40px 0 0 auto;
-    align-self: center;
+    // align-self: end;
+    margin: 0 0 35px auto;
+    // margin: 40px 0 0 auto;
+    // align-self: center;
     grid-column: 2;
+    grid-row: 5;
   }
   &__buttons {
     max-width: 260px;
@@ -45,6 +53,14 @@
     &-text {
       margin-right: 60px;
     }
+  }
+  &__dev {
+    grid-column: 2;
+    grid-row: 5;
+    align-self: end;
+    // display: flex;
+    // flex-flow: column;
+    margin: 0 0 5px auto;
   }
 }
 

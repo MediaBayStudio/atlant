@@ -4,22 +4,25 @@ let lazy,
   overlay,
   mask,
   contactsMap,
+  faqPopup,
   thanksPopup,
   thanksPopupTimer,
-  // callbackPopup,
-  // orderPopup,
+  callbackPopup,
   fakeScrollbar,
   body = document.body,
   currentSlug = body.dataset.post,
   templateDir = body.dataset.directory,
   currentPostName = body.dataset.postName,
-  // siteurl = dataset.siteurl,
   // mobileRegExp = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i,
   // mobile = mobileRegExp.test(navigator.userAgent),
   // IE = navigator.userAgent.indexOf("MSIE ") > -1 || navigator.userAgent.indexOf("Trident/") > -1,
   q = function(selector, element) {
     element = element || document.body;
     return element.querySelector(selector);
+  },
+  id = function(selector, element) {
+    element = element || document;
+    return element.getElementById(selector);
   },
   qa = function(selectors, element, toArray) {
     element = element || document.body;

@@ -1,4 +1,4 @@
-<div class="thanks-popup popup container">
+<div class="thanks-popup popup container" id="thanks-popup">
   <div class="thanks-popup__cnt popup__content">
     <button type="button" class="thanks-popup__close popup__close">
       <svg class="close__icon">

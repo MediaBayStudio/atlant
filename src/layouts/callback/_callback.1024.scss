@@ -3,7 +3,8 @@
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
 
-.callback-form {
+.callback-form,
+.faq-form {
   margin-top: 25px;
   max-width: 780px;
   &-wrapper {

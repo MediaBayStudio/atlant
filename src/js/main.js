@@ -7,22 +7,25 @@ let lazy,
   overlay,
   mask,
   contactsMap,
+  faqPopup,
   thanksPopup,
   thanksPopupTimer,
-  // callbackPopup,
-  // orderPopup,
+  callbackPopup,
   fakeScrollbar,
   body = document.body,
   currentSlug = body.dataset.post,
   templateDir = body.dataset.directory,
   currentPostName = body.dataset.postName,
-  // siteurl = dataset.siteurl,
   // mobileRegExp = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i,
   // mobile = mobileRegExp.test(navigator.userAgent),
   // IE = navigator.userAgent.indexOf("MSIE ") > -1 || navigator.userAgent.indexOf("Trident/") > -1,
   q = function(selector, element) {
     element = element || document.body;
     return element.querySelector(selector);
+  },
+  id = function(selector, element) {
+    element = element || document;
+    return element.getElementById(selector);
   },
   qa = function(selectors, element, toArray) {
     element = element || document.body;
@@ -142,13 +145,18 @@ menuNav.addEventListener('click', function() {
 
 });
 (function() {
-  thanksPopup = new Popup('.thanks-popup', {
+  thanksPopup = new Popup('#thanks-popup', {
     closeButtons: '.thanks-popup__close'
   });
 
-  callbackPopup = new Popup('.callback-popup', {
+  callbackPopup = new Popup('#callback-popup', {
     openButtons: '.callback-btn',
     closeButtons: '.callback-popup__close'
+  });
+
+  faqPopup = new Popup('#faq-popup', {
+    openButtons: '#opening-faq-popup-btn',
+    closeButtons: '.faq-popup__close'
   });
 
   thanksPopup.addEventListener('popupbeforeopen', function() {
@@ -296,11 +304,25 @@ $.validator.methods.userMsg = function(value, element) {
     prevArrow = '<button type="button" class="arrow"></button>',
     arrowSvg = '<svg class="arrow__svg" width="35" height="64" viewBox="0 0 35 64" fill="inherit" xmlns="http://www.w3.org/2000/svg"><path d="M1.61232 59.6024C0.618114 60.6145 0.618114 62.2405 1.61232 63.2451C2.60653 64.2498 4.21285 64.2535 5.20706 63.2451L34.2543 33.8207C35.2486 32.816 35.2486 31.19 34.2543 30.1779L5.20706 0.753472C4.21285 -0.251157 2.60653 -0.251157 1.61232 0.753472C0.618114 1.76182 0.618114 3.39155 1.61232 4.39618L28.1036 32.0012L1.61232 59.6024Z" fill="inherit"/></svg>',
     dot = '<button type="button" class="dot"></button>',
-    heroSlider = q('.hero-sect__slider'),
+
+    heroSlider = id('hero-sect__slider'),
     heroSlides = heroSlider && qa('.hero-sect__slide', heroSlider),
+
+    partnersSlider = id('partners'),
+    partnersSlides = partnersSlider && qa('.partners__img', partnersSlider),
+
     createArrow = function(className, inside) {
-      return `<button type="button" class="arrow ${className}">${inside}</button>`;
-    };
+
+      className = (className.indexOf('prev') === -1 ? 'next ' : 'prev ') + className;
+
+      return `<button type="button" class="arrow arrow__${className}">${inside}</button>`;
+    },
+    buildSliders = function(functions) {
+      for (let i = functions.length - 1; i >= 0; i--) {
+        functions[i]();
+      }
+    },
+    buildSlidersFunctions = [];
 
   if (heroSlider && heroSlides.length && heroSlides.length > 1) {
     $(heroSlider).slick({
@@ -322,6 +344,69 @@ $.validator.methods.userMsg = function(value, element) {
   }
 
 
+  if (partnersSlider && partnersSlides.length && partnersSlides.length > 1) {
+    let $partnersSlider = $(partnersSlider),
+      buildPartnersSlider = function() {
+      // если ширина экрана больше 576px и слайдов меньше 3, то слайдера не будет
+        // показываем по 2 слайда
+      if (matchesMedia('(min-width: 575.98px)') && partnersSlides.length < 3) {
+        if (partnersSlider.classList.contains('slick-slider')) {
+          $partnersSlider.slick('unslick');
+        }
+        // если ширина экрана больше 1024px и слайдов меньше 5, то слайдера не будет
+          // показываем по 4 слайда
+      } else if (matchesMedia('(min-width: 1023.98px)') && partnersSlides.length < 5) {
+        if (partnersSlider.classList.contains('slick-slider')) {
+          $partnersSlider.slick('unslick');
+        }
+        // в других случаях делаем слайдер
+      } else {
+        if (partnersSlider.classList.contains('slick-slider')) {
+          // слайдер уже создан
+          return;
+        }
+        $partnersSlider.slick({
+          appendArrows: $('.partners__nav'),
+          prevArrow: createArrow('partners__prev', arrowSvg),
+          nextArrow: createArrow('partners__next', arrowSvg),
+          slide: '.partners__img',
+          accessibility: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+          autoplay: true,
+          autoplaySpeed: 4000,
+          mobileFirst: true,
+          variableWidth: true,
+          centerMode: true,
+          centerPadding: '0px',
+          responsive: [{
+            breakpoint: 575.98,
+            settings: {
+              centerMode: false,
+              initialSlide: 0,
+              slidesToScroll: 1,
+              slidesToShow: 2,
+            }
+          }, {
+            breakpoint: 1024.98,
+            settings: {
+              centerMode: false,
+              slidesToScroll: 1,
+              slidesToShow: 4
+            }
+          }]
+        });
+      }
+    }
+
+    buildSlidersFunctions[0] = buildPartnersSlider;
+  }
+
+  if (buildSlidersFunctions.length > 0) {
+    window.addEventListener('resize', buildSliders);
+    buildSliders(buildSlidersFunctions);
+  }
 
   // buildSlider = function() {
   //   // если ширина экрана больше 578px и слайдов меньше 4, то слайдера не будет
@@ -706,6 +791,67 @@ $.validator.methods.userMsg = function(value, element) {
     });
 
     selects.updateLabel(selects.e[0].textContent);
+  }
+
+})();
+;(function() {
+  let faqBlock = id('faqs');
+
+  if (faqBlock) {
+    let faqBlocks = faqBlock.children,
+      initDropdown = function() {
+        let childs = faqBlocks[0].children;
+
+        hideText(1);
+        faqBlocks[0].style.maxHeight = childs[0].scrollHeight + childs[1].scrollHeight + 'px';
+        faqBlocks[0].classList.add('active');
+
+        faqBlock.addEventListener('click', dropdownText);
+        window.addEventListener('resize', initDropdown);
+      },
+
+      dropdownText = function(element) {
+        if (element instanceof Event) {
+          let eventTarget = element.target;
+
+          if (eventTarget.tagName === 'BUTTON') {
+            element = eventTarget;
+          } else {
+            return;
+          }
+
+        } else {
+          element = element || faqBlocks[0]; // если элемент не передали, то открываем первый
+        }
+
+        let minHeight = element.scrollHeight,
+          parent = element.parentElement,
+          answer = element.nextElementSibling,
+          answerHeight = answer.scrollHeight;
+
+        if (parent.classList.contains('active')) {
+          if (faqBlocks.length > 1) {
+            parent.style.maxHeight = minHeight + 'px';
+            parent.classList.remove('active');
+          }
+        } else {
+          hideText(0);
+
+          parent.classList.add('active');
+          parent.style.maxHeight = minHeight + answerHeight + 'px';
+        }
+      },
+      
+      hideText = function(start) {
+        for (let i = start; i < faqBlocks.length; i++) {
+          faqBlocks[i].classList.remove('active');
+          faqBlocks[i].style.maxHeight = faqBlocks[i].children[0].scrollHeight + 'px';
+        }
+      };
+
+
+    window.addEventListener('load', initDropdown);
+
   }
 
 })();

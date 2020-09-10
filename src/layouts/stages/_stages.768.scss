@@ -68,17 +68,27 @@
 
 
 .stages_numbers {
-
+  display: flex;
+  flex-wrap: wrap;
   > .stage {
-
+    max-width: 220px;
+    margin: 0 auto 35px 0;
     > .stage__number {
-
+      height: 80px;
     }
     > .stage__title {
-
+      font-size: 24px;
     }
     > .stage__descr {
-
+      font-size: 16px;
     }
+  }
+}
+
+.stages_numbers.childs-3 {
+  > .stage-3,
+  > .stage-6,
+  > .stage-9 {
+    margin-right: 0;
   }
 }

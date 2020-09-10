@@ -1,0 +1,15 @@
+// assets import
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.procedures-sect {
+  &__title {
+  }
+  &__descr {
+    &.left {
+    }
+    &.right {
+    }
+  }
+}

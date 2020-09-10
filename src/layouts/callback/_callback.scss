@@ -3,11 +3,38 @@
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
 
+.callback-sect {
+  margin: 35px 0;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  background: $white;
+  color: $black;
+  &__title {
+    max-width: 270px;
+    margin: 0 auto 10px;
+    font: 22px/145% IntroBlack;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__subtitle {
+    max-width: 270px;
+    margin: 0 auto 10px;
+    display: block;
+    font: 500 14px/143% Ubuntu;
+    color: $blue;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
 .callback-form {
   max-width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  &-wrap {
+
+  }
   > .field {
     margin-top: 30px;
     max-width: 350px;

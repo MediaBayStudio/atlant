@@ -27,7 +27,9 @@
 
   &__dots {}
 
-  &__body {}
+  &__body {
+    width: 55%;
+  }
 
   &__step {}
 
@@ -92,13 +94,21 @@
     }
   }
 
-  &__footer {}
+  &__footer {
+    width: 55%;
+    &.hidden {
+      display: block !important;
+      opacity: 0;
+    }
+  }
 
   &__next {
     margin: 0 0 0 auto;
   }
 
   &__img {
-    margin: 45px 0 0 70px;
+    width: auto;
+    height: auto;
+    // margin: 45px 0 0 70px;
   }
 }

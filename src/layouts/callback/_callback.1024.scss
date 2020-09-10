@@ -6,6 +6,9 @@
 .callback-form {
   margin-top: 25px;
   max-width: 780px;
+  &-wrapper {
+    padding: 50px 80px;
+  }
   > .field {
     max-width: 360px;
   }

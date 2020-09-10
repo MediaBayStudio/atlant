@@ -36,18 +36,15 @@
 .stages_numbers {
 
   > .stage {
-
+    max-width: 450px;
     > .stage__number {
 
     }
     > .stage__title {
-
+      font-size: 20px;
     }
     > .stage__descr {
-
+      font-size: 15px;
     }
   }
-}// assets import
-@import '../../scss/assets/colors';
-@import '../../scss/assets/mixins';
-@import '../../scss/assets/variables';
+}

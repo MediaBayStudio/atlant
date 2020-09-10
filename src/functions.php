@@ -21,6 +21,27 @@ add_action( 'init', function() {
       add_action( 'edit_form_after_title', ['WP_Privacy_Policy_Content', 'notice'] );
     } );
   }
+
+  register_taxonomy( 'partners', ['page'], [
+    'label'                 => '', // определяется параметром $labels->name
+    'labels'                => [
+      'name'              => 'Банки-партнеры',
+      'singular_name'     => 'Банки-партнеры',
+      'search_items'      => 'Найти',
+      'all_items'         => 'Все',
+      'view_item '        => 'Показать',
+      'parent_item'       => 'Родитель',
+      'parent_item_colon' => 'Родитель:',
+      'edit_item'         => 'Изменить',
+      'update_item'       => 'Обносить',
+      'add_new_item'      => 'Добавить',
+      'new_item_name'     => 'Добавить',
+      'menu_name'         => 'Банки-партнеры',
+    ],
+    'hierarchical'          => false,
+    'meta_box_cb'           => false
+  ] );
+
 } );
 
 // убрать описание для таксономий в админке

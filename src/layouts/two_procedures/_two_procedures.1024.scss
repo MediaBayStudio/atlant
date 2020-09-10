@@ -1,0 +1,22 @@
+// assets import
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.procedures-sect {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &__title {
+    margin-bottom: 50px;
+    width: 100%;
+  }
+  &__descr {
+    margin: 0;
+    max-width: 460px;
+    &.left {
+    }
+    &.right {
+    }
+  }
+}

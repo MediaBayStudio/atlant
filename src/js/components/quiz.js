@@ -58,15 +58,35 @@
       $dotsWrap = q('.quiz__dots', $quizBlock),
       $dots = $dotsWrap.children,
       $quizBody = q('.quiz__body', $quizBlock),
-      $quizSteps = qa('.quiz__step', $quizBody, true),
+      // $quizSteps = qa('.quiz__step', $quizBody, true),
+      $quizSteps = qa('.quiz__step', $quizBody, true)
+        .filter(el => !/quiz__step-\d\w/.test(el.className)),
       $quizFooter = q('.quiz__footer', $quizBlock),
       $quizNextBtn = q('.quiz__next', $quizFooter),
       $quizResult = q('.quiz__form-result', $quizBody),
       currentStep = 0,
       $currentStep = $quizSteps[currentStep],
       $nextStep = $quizSteps[currentStep + 1],
+      $prevStep = null,
       $finalStep = q('.quiz__final-step', $quizBody),
       sumRegExp = /(\d{1,3})(?=((\d{3})*)$)/g,
+      prevStep = function() {
+
+      },
+      findNextStep = function() {
+        let $stepElement,
+          nextSubStepClassName = '.' + $currentStep.className.match(/quiz__step-\d/)[0] + 'a',
+          nextSubStepSelector = nextSubStepClassName + '[data-step="' + $currentStep.dataset.value + '"]',
+          $nextSubStep = q(nextSubStepSelector, $quizBody);
+
+        if ($nextSubStep) {
+
+        } else {
+
+        }
+
+        
+      },
       nextStep = function() {
         if (event && event.type === 'keyup' && event.key !== 'Enter') {
           return;
@@ -77,6 +97,10 @@
 
           $quizNextBtn.removeEventListener('click', nextStep);
           $quizNextBtn.classList.add('disabled');
+
+          $nextStep = findNextStep();
+          
+          $prevStep = $currentStep;
 
           $currentStep.classList.remove('visible');
           $nextStep.classList.add('visible');
@@ -93,7 +117,7 @@
             $quizFooter.classList.add('hidden');
             $quizSteps.forEach(function($step) {
               if ($step !== $finalStep) {
-                $quizResult.value += $step.dataset.value;
+                $quizResult.value += $step.dataset.text;
               }
             });
 
@@ -117,7 +141,8 @@
       // Получение данных из полей форм
       getData = function() {
         let $currentStepFields = qa('input, textarea, select', $currentStep, true),
-          value = '';
+          value = '',
+          curretnValue = [];
 
         $currentStepFields.forEach(function($field) {
           let fieldTagName = $field.tagName,
@@ -132,8 +157,9 @@
             if (!$fieldTitle) {
               $fieldTitle = q('.quiz__radio-label', $fieldParent);
             }
-
+            console.log(fieldValue);
             value += serializeValue($fieldTitle.textContent, fieldValue);
+            curretnValue.push(fieldValue);
 
             // Если рядом с радиокнопкой должно появиться еще поле, то
               // если его значение пустое, ничего не возвращаем
@@ -141,19 +167,25 @@
               let $extraField = q('[data-radio="' + fieldValue + '"] > input', $currentStep);
               if ($extraField.value === '') {
                 value = '';
+                curretnValue = [];
               }
             }
           // Если поле с текстом, числом или поле ввода и не пустое
           } else if ((fieldType === 'text' || fieldType === 'number' || fieldTagName === 'TEXTAREA') && fieldValue !== '') {
             $fieldTitle = q('.quiz__text-label', $fieldParent);
             value += serializeValue($fieldTitle.textContent, fieldValue);
+            curretnValue.push(fieldValue);
           // Если поле это селект
           } else if (fieldTagName === 'SELECT') {
             $fieldTitle = q('.quiz__text-label', $fieldParent);
             value += serializeValue($fieldTitle.textContent, fieldValue);
+            curretnValue.push(fieldValue);
           }
 
         });
+
+        // установка текущего значения для шага
+        $currentStep.dataset.value = curretnValue.join('|&|');
 
         return value;
       },
@@ -194,7 +226,7 @@
           
         }
 
-        $currentStep.dataset.value = currentStepValue;
+        $currentStep.dataset.text = currentStepValue;
 
         if (currentStepValue === '') {
           $quizNextBtn.classList.add('disabled');
@@ -210,6 +242,7 @@
         $quizImg.src = imagePath + '-quiz-' + (currentStep + 1) + '.png';
       };
 
+    console.log($quizSteps);
     setQuizBodyHeight();
     setQuizImage();
 

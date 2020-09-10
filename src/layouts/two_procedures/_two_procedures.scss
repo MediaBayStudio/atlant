@@ -1,0 +1,20 @@
+// assets import
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.procedures-sect {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  color: $black;
+  &__title {
+  }
+  &__descr {
+    margin-top: 30px;
+    font: 300 14px/143% Ubuntu;
+    &.left {
+    }
+    &.right {
+    }
+  }
+}

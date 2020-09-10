@@ -3,8 +3,30 @@
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
 
+.callback-sect {
+  padding-top: 0;
+  padding-bottom: 0;
+  background: 0 0;
+  &__title {
+    // margin: 0;
+    font-size: 55px;
+    line-height: 110%;
+  }
+  &__subtitle {
+    margin: 0;
+    font-size: 30px;
+  }
+}
+
 .callback-form {
   max-width: 580px;
+  margin: auto;
+  &-wrap {
+    padding: 50px 60px;
+    background: $white;
+    box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
   > .field {
     max-width: 260px;
   }

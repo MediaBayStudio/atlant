@@ -1,6 +1,7 @@
 <section class="stages-sect container"> <?php
   $sect_title = $section['sect_title'];
   $sect_subtitle = $section['sect_subtitle'];
+  $sect_descr = $section['sect_descr'];
   $stages = $section['stages_repeater'];
   $sect_style = $section['style'];
   $footnote_title = $section['footnote_title'];
@@ -11,6 +12,9 @@
   endif;
   if ( $sect_subtitle ) : ?>
     <p class="stages-sect__subtitle"><?php echo $sect_subtitle ?></p> <?php
+  endif;
+  if ( $sect_descr ) : ?>
+    <p class="stages-sect__descr"><?php echo $sect_descr ?></p> <?php
   endif;
   $sect_modifier = ' stages_';
   $sect_modifier .= $sect_style === 'Круг' ? 'circle' : 'numbers';

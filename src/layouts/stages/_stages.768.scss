@@ -4,20 +4,28 @@
 @import '../../scss/assets/variables';
 
 .stages-sect {
-
+  padding-bottom: 50px;
   &__title {
     font-size: 54px;
   }
+
   &__subtitle {
-
+    margin: 0;
+    font-size: 30px;
   }
-  &__stages {
 
+  &__descr {
+    margin-top: 20px;
+    font-size: 16px;
   }
+
+  &__stages {}
+
   &__footnote {
     &-title {
       font-size: 24px;
     }
+
     &-descr {
       font-size: 24px;
     }
@@ -30,84 +38,115 @@
   grid-template-rows: 1fr auto;
   grid-template-columns: 48% 4% 48%;
   text-align: right;
-  > .stage {
-    &-1 {
-      grid-row: 1;
-      grid-column: 1;
-    }
-    &-2 {
-      grid-row: 1/span 2;
-      grid-column: 3;
-      text-align: left;
-      align-self: center;
-    }
-    &-3 {
-      grid-row: 2;
-      grid-column: 1;
-    }
-    > .stage__number {
 
-    }
-    > .stage__title { 
+  >.stage {
+    >.stage__number {}
+
+    >.stage__title {
       font-size: 18px;
     }
-    > .stage__descr {
+
+    >.stage__descr {
       font-size: 16px;
       font-weight: normal;
     }
   }
+}
 
-  &.childs-5 {
-    > .stage-2 {
-      grid-row: 1;
-    }
-    > .stage-4 {
-      text-align: left;
-      grid-row: 2/span 2;
-      grid-column: 3;
-      align-self: center;
-    }
-    > .stage-5 {
-      grid-column: 1;
-      grid-row: 3;
-    }
+.stages_circle.childs-5 {
+  >.stage-1 {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  >.stage-2 {
+    grid-row: 1;
+    grid-column: 3;
+    text-align: left;
+    align-content: start;
+  }
+
+  >.stage-3 {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  >.stage-4 {
+    text-align: left;
+    grid-row: 2/span 2;
+    grid-column: 3;
+    align-self: center;
+  }
+  >.stage-5 {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+
+.stages_circle.childs-4 {
+  >.stage-1 {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  >.stage-2 {
+    grid-row: 1;
+    grid-column: 3;
+    text-align: left;
+  }
+
+  >.stage-3 {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  >.stage-4 {
+    grid-row: 2;
+    grid-column: 3;
+    text-align: left;
   }
 }
 
 
+.stages_circle.childs-3 {}
+
 .stages_numbers {
   display: flex;
   flex-wrap: wrap;
-  > .stage {
+
+  >.stage {
     max-width: 220px;
-    margin: 0 auto 35px 0;
-    > .stage__number {
+    margin: 35px auto 0 0;
+
+    >.stage__number {
       height: 80px;
     }
-    > .stage__title {
+
+    >.stage__title {
       font-size: 24px;
     }
-    > .stage__descr {
+
+    >.stage__descr {
       font-size: 16px;
     }
   }
 }
 
 .stages_numbers.childs-3 {
-  > .stage-3,
-  > .stage-6,
-  > .stage-9 {
+
+  >.stage-3,
+  >.stage-6,
+  >.stage-9 {
     margin-right: 0;
   }
 }
 
 .stages_numbers.childs-2 {
-  > .stage {
+  >.stage {
     max-width: 320px;
   }
-  > .stage-2,
-  > .stage-4,
-  > .stage-6 {
+
+  >.stage-2,
+  >.stage-4,
+  >.stage-6 {
     margin-right: 0;
   }
 }

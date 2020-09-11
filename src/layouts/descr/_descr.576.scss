@@ -2,3 +2,31 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.descr-sect {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  &__title {
+  }
+  &__blocks {
+  }
+  &__block {
+    flex-flow: row;
+    align-items: center;
+    &.even {
+      flex-flow: row-reverse;
+      > .descr-sect__block-img {
+        margin: 0 0 0 20px;
+      }
+    }
+  }
+  &__block-img {
+    max-width: none;
+    width: 45%;
+    margin: 0 20px 0 0;
+  }
+  &__block-title {
+  }
+  &__block-descr {
+  }
+}

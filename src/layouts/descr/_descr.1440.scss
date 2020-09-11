@@ -2,3 +2,27 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.descr-sect {
+  &__title {
+    > .br {
+      display: none;
+    }
+  }
+  &__blocks {
+  }
+  &__block {
+    &.even {
+      > .descr-sect__block-img {
+        margin: 0 0 0 100px;
+      }
+    }
+  }
+  &__block-img {
+    margin: 0 100px 0 0;
+  }
+  &__block-title {
+  }
+  &__block-descr {
+  }
+}

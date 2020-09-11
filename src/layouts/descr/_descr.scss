@@ -2,3 +2,36 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.descr-sect {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  &__title {
+    max-width: 330px;
+    margin: auto;
+    > .br {
+      display: none;
+    }
+  }
+  &__blocks {
+    font: 300 14px/143% Ubuntu;
+  }
+  &__block {
+    margin-top: 50px;
+    display: flex;
+    flex-flow: column;
+  }
+  &__block-img {
+    margin-bottom: 30px;
+    max-width: 300px;
+    object-fit: contain;
+  }
+  &__block-title {
+    margin-bottom: 10px;
+    max-width: 250px;
+    font: 17px/141% Ubuntu;
+    color: $blue;
+  }
+  &__block-descr {
+  }
+}

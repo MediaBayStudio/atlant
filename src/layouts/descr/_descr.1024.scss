@@ -2,3 +2,30 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.descr-sect {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  &__title {
+    // padding: 25px 0 50px;
+  }
+  &__blocks {
+  }
+  &__block {
+    &.even {
+      > .descr-sect__block-img {
+        margin: 0 0 0 50px;
+      }
+    }
+  }
+  &__block-img {
+    max-width: 430px;
+    width: auto;
+    margin: 0 50px 0 0;
+  }
+  &__block-title {
+    margin-bottom: 20px;
+  }
+  &__block-descr {
+  }
+}

@@ -6,10 +6,14 @@
 .stages-sect {
 
   &__title {
-    margin-bottom: 50px;
+
   }
   &__subtitle {
-
+    margin: 0 0 10px;
+  }
+  &__descr {
+    margin: 20px auto 10px;
+    max-width: 815px;
   }
   &__stages {
 

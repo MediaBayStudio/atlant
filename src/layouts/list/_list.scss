@@ -3,35 +3,73 @@
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
 
-.list-sect {
-  padding-top: 35px;
-  padding-bottom: 15px;
-  color: $black;
-  &__title {
-    margin-bottom: 30px;
-  }
-  &__list-wrapper {
-  }
-  &__list-title {
-    margin-bottom: 25px;
-    display: block;
-    font: 18px/141% Ubuntu;
-  }
-  &__list {
+/* start STYLES FOR LISTS */
+
+  $list_line_width: 24px;
+  $list_line_margin_right: 15px;
+
+  .list {
     font: 14px/150% Ubuntu;
-  }
-  &__list-item {
-    display: flex;
-    margin-bottom: 20px;
-    &::before {
-      content: '';
-      margin: 11px 15px 0 0;
-      flex-shrink: 0;
-      width: 24px;
-      height: 2px;
-      background: $red;
+    &-wrap {
+      
+    }
+    &-title {
+      margin: 40px 0 20px;
+      font: 18px/143% Ubuntu;
+    }
+    &-item {
+      margin-bottom: 20px;
+      padding-left: $list_line_width + $list_line_margin_right;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 0;
+        flex-shrink: 0;
+        width: $list_line_width;
+        height: 2px;
+        background: $red;
+      }
+      // у последнего убрать отступ
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
     }
   }
-}
-.container {
-}
+
+/* end STYLES FOR LISTS */
+
+// .list-sect {
+//   padding-top: 35px;
+//   padding-bottom: 15px;
+//   color: $black;
+//   &__title {
+//     margin-bottom: 30px;
+//   }
+//   &__list-wrapper {
+//   }
+//   &__list-title {
+//     margin-bottom: 25px;
+//     display: block;
+//     font: 18px/141% Ubuntu;
+//   }
+//   &__list {
+//     font: 14px/150% Ubuntu;
+//   }
+//   &__list-item {
+//     display: flex;
+//     margin-bottom: 20px;
+//     &::before {
+//       content: '';
+//       margin: 11px 15px 0 0;
+//       flex-shrink: 0;
+//       width: 24px;
+//       height: 2px;
+//       background: $red;
+//     }
+//   }
+// }
+// .container {
+// }

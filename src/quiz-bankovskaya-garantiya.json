@@ -1,0 +1,84 @@
+[{
+  "step-title": "Информация о банковской гарантии",
+  "options": {
+    "img": "quiz-man-with-paper.png"
+  },
+  "fields": [{
+    "type": "radio",
+    "group-title": "Тип банковской гарантии",
+    "required": true,
+    "values": [
+      "На исполнение контракта/договора",
+      "На возврат аванса  по контракту/договору",
+      "На обеспечение выполнения гарантийных обязательств",
+      "На обеспечение участия в закупках"
+    ]
+  }]
+}, {
+
+  "step-title": "Информация о банковской гарантии",
+  "options": {
+    "img": "quiz-man-with-paper.png"
+  },
+  "fields": [{
+    "type": "text",
+    "title": "Сумма банковской гарантии",
+    "required": true,
+    "placeholder": "_ руб."
+  }, {
+    "type": "text",
+    "title": "Срок банковской гарантии",
+    "required": true,
+    "placeholder": "_ дней"
+  }]
+
+}, {
+
+  "step-title": "Информация о банковской гарантии",
+  "options": {
+    "img": "quiz-man-with-paper.png"
+  },
+  "fields": [{
+    "type": "radio",
+    "group-title": "Выберите по какому ФЗ",
+    "required": true,
+    "values": [
+      "44-ФЗ",
+      "615-ПП",
+      "223-ФЗ",
+      "Коммерческая или др."
+    ]
+  }]
+
+}, {
+
+  "step-title": "Информация о банковской гарантии",
+  "options": {
+    "img": "quiz-man-with-paper.png"
+  },
+  "fields": [{
+    "type": "text",
+    "title": "Реестровые номера",
+    "required": true
+  }, {
+    "type": "textarea",
+    "title": "Комментарий"
+  }]
+
+}, {
+
+  "step-title": "Информация о юридическом лице",
+  "options": {
+    "img": "quiz-docs-papers.png"
+  },
+  "fields": [{
+    "type": "text",
+    "title": "Наименованию ЮЛ, ИП",
+    "required": true
+  }, {
+    "type": "text",
+    "title": "ИНН юридического лица, ИП",
+    "required": true
+  }]
+
+}]

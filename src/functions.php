@@ -125,7 +125,7 @@ add_action( 'wp_enqueue_scripts', function() {
 			'MobileMenu.min',
 			'Popup.min',
 			'svg4everybody.min',
-      'tail.select.min',
+      // 'tail.select.min',
 			'main'
 		];
 
@@ -154,7 +154,7 @@ add_action( 'wp_enqueue_scripts', function() {
       'MobileMenu.min',
       'Popup.min',
       'svg4everybody.min',
-      'tail.select.min',
+      // 'tail.select.min',
       'main'
     ];
 

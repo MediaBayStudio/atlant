@@ -3,9 +3,24 @@
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
 
+/* start STYLES FOR LISTS */
+
+  .list {
+    font-size: 15px;
+    &-title {
+      font-size: 20px;
+    }
+    &-item {
+      &::before {
+      }
+    }
+  }
+
+/* end STYLES FOR LISTS */
+
 .list-sect {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  // padding-top: 50px;
+  // padding-bottom: 50px;
   &__title {
   }
   &__list-wrapper {
@@ -13,7 +28,7 @@
   &__list-title {
   }
   &__list {
-    font-size: 15px;
+    // font-size: 15px;
   }
   &__list-item {
     &::before {

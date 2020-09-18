@@ -10,11 +10,14 @@
       transform: rotate(180deg);
     }
     > .sub-menu {
+      transition: opacity .35s, visibility .35s;
+      visibility: visible;
       opacity: 1;
-      pointer-events: auto;
+      // pointer-events: auto;
     }
   }
 }
+
 
 .hdr__nav-list > .nav__list-item.contains-submenu:hover > .sub-menu .nav__link:hover ,
 .hdr__nav-list > .nav__list-item:hover,

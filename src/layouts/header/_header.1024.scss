@@ -84,8 +84,9 @@
           left: -30px;
           top: calc(100% + 1px);
           opacity: 0;
-          pointer-events: none;
-          transition: opacity .35s;
+          visibility: hidden;
+          // pointer-events: none;
+          transition: opacity .35s .25s, visibility .35s .25s;
           background: $white;
           color: $blue;
           text-transform: none;

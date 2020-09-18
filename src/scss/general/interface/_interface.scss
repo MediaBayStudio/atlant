@@ -15,9 +15,12 @@ body {
   }
 }
 
-[class*=website] {
-  display: none !important;
-  visibility: hidden !important;
+.cf7-form-field {
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  position: absolute;
 }
 
 #fake-scrollbar {
@@ -48,11 +51,14 @@ body {
 }
 
 .sect {
-
+  padding-top: 35px;
+  padding-bottom: 35px;
+  color: $black;
   &_bg {
 
   }
   &-title {
+    margin-bottom: 30px;
     font: 500 18px/133% Ubuntu;
     text-align: center;
     text-transform: uppercase;

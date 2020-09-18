@@ -1,0 +1,72 @@
+[{
+
+  "step-title": "Информация по кредиту",
+  "options": {
+    "img": "quiz-money.png"
+  },
+  "fields": [{
+    "type": "text",
+    "title": "Сумма кредитного продукта",
+    "required": true,
+    "placeholder": "_ руб."
+  }]
+
+}, {
+
+  "step-title": "Информация по кредиту",
+  "options": {
+    "img": "quiz-tower-crane.png"
+  },
+  "fields": [{
+    "type": "checkbox",
+    "group-title": "Цель кредита",
+    "required": true,
+    "values": [
+      "Инвестиционные цели (покупка недвижимости, оборудования и пр.)",
+      "Пополнение оборотных средств",
+      "Овердрафт",
+      "На исполнение контракта",
+      "Рефинансирование",
+      "Другие цели"
+    ]
+  }]
+
+}, {
+
+  "step-title": "Информация по кредиту",
+  "options": {
+    "img": "quiz-house-on-keyboard.png"
+  },
+  "fields": [{
+    "type": "radio",
+    "group-title": "Наличие залога",
+    "required": true,
+    "values": [
+      "Нет",
+      "Eсть"
+    ]
+  }], 
+  "extrafields": {
+    "Eсть": [{
+      "type": "text",
+      "title": "Описание залога"
+    }]
+  }
+
+}, {
+
+  "step-title": "Информация о юридическом лице",
+    "options": {
+      "img": "quiz-docs-papers.png"
+    },
+    "fields": [{
+      "type": "text",
+      "title": "Наименование ЮЛ, ИП",
+      "required": true
+    }, {
+      "type": "text",
+      "title": "ИНН юридического лица, ИП",
+      "required": true
+    }]
+
+}]

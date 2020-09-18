@@ -15,6 +15,10 @@
     text-align: center;
     color: $black;
   }
+  &__descr {
+    margin: 30px 0 45px;
+    font: 300 14px/143% Ubuntu;
+  }
 }
 
 .feature {

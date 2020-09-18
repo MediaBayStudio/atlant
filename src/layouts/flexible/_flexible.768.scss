@@ -1,0 +1,10 @@
+// assets import
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.flexible-sect {
+  &__descr {
+    font-size: 16px;
+  }
+}

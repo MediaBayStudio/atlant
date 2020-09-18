@@ -1,0 +1,87 @@
+[{
+  "step-title": "Информация по кредиту",
+  "options": {
+    "img": "quiz-analytics-papers.png"
+  },
+  "fields": [{
+    "type": "text",
+    "title": "Остаток долга по действующему залоговому займу",
+    "required": true,
+    "placeholder": "_ руб."
+  }]
+}, {
+
+  "step-title": "Информация по кредиту",
+  "options": {
+    "img": "quiz-give-money.png"
+  },
+  "fields": [{
+    "type": "text",
+    "title": "Сумма, которую вы хотите оформить сверх рефинансируемой суммы",
+    "required": true,
+    "placeholder": "_ руб."
+  }]
+
+}, {
+
+  "step-title": "Информация о кредитной истории",
+  "options": {
+    "img": "quiz-village-house.png"
+  },
+  "fields": [{
+    "type": "select",
+    "title": "Тип объекта залога",
+    "required": true,
+    "values": [
+      "Квартира",
+      "Дом",
+      "Земельный участок",
+      "Дом+земельный участок"
+    ]
+  }, {
+    "type": "textarea",
+    "title": "Краткое описание объекта залога",
+    "required": true
+  }]
+
+}, {
+
+  "step-title": "Информация о предмете залога",
+  "options": {
+    "img": "quiz-village-house.png"
+  },
+  "fields": [{
+    "type": "text",
+    "title": "Рыночная стоимость объекта залога",
+    "required": true,
+    "placeholder": "_ руб."
+  }]
+
+}, {
+
+  "step-title": "Персональная информация",
+  "options": {
+    "img": "quiz-geo.png"
+  },
+  "fields": [{
+    "type": "radio",
+    "group-title": "Ваша регистрация",
+    "required": true,
+    "values": [
+      "Санкт-Петербург и ЛО",
+      "Другой регион"
+    ]
+  }, {
+    "type": "text",
+    "title": "Ваш возраст",
+    "required": true
+  }], 
+  "extrafields": {
+    "Другой регион": [{
+      "type": "text",
+      "title": "Укажите регион",
+      "required": true
+    }]
+  }
+
+}]

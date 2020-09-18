@@ -3,34 +3,67 @@
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
 
-.list-sect {
-  &::after {
-    content: '';
-    display: table;
-    clear: both;
-  }
-  &__title {
-    margin-bottom: 40px;
-  }
-  &__list-wrapper {
-  }
-  &__list-title {
-    margin-bottom: 30px;
-  }
-  &__list {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: space-between;
+/* start STYLES FOR LISTS */
+
+  $list_line_width: 40px;
+  $list_line_margin_right: 20px;
+
+  .list {
     font-size: 16px;
-  }
-  &__list-item {
-    width: 48%;
-    margin-bottom: 25px;
-    &::before {
-      width: 40px;
-      margin-right: 20px;
+    &_two-col {
+      display: flex;
+      flex-flow: wrap;
+      justify-content: space-between;
+      > .list-item {
+        width: 48%;
+        // у последних двух убрать отступ
+        &:nth-last-child(-n+2) {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &-title {
+      font-size: 24px;
+    }
+    &-item {
+      margin-bottom: 25px;
+      padding-left: $list_line_width + $list_line_margin_right;
+      &::before {
+        width: $list_line_width;
+      }
     }
   }
-}
-.container {
-}
+
+/* end STYLES FOR LISTS */
+
+// .list-sect {
+//   &::after {
+//     content: '';
+//     display: table;
+//     clear: both;
+//   }
+//   &__title {
+//     margin-bottom: 40px;
+//   }
+//   &__list-wrapper {
+//   }
+//   &__list-title {
+//     margin-bottom: 30px;
+//   }
+//   &__list {
+//     display: flex;
+//     flex-flow: wrap;
+//     justify-content: space-between;
+//     font-size: 16px;
+//   }
+//   &__list-item {
+//     width: 48%;
+//     margin-bottom: 25px;
+//     &::before {
+//       width: 40px;
+//       margin-right: 20px;
+//     }
+//   }
+// }
+// .container {
+// }

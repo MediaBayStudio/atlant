@@ -1,0 +1,62 @@
+[{
+  "step-title": "Информация по кредиту",
+  "options": {
+    "img": "quiz-young-family.png"
+  },
+  "fields": [{
+    "type": "text",
+    "title": "Необходимая сумма залогового кредита (ипотеки)",
+    "required": true,
+    "placeholder": "_ руб."
+  }]
+}, {
+
+  "step-title": "Информация о предмете залога (ипотеки)",
+  "options": {
+    "img": "quiz-village-house.png"
+  },
+  "fields": [{
+    "type": "select",
+    "title": "Объект залога",
+    "required": true,
+    "values": [
+      "Квартира",
+      "Дом",
+      "Участок",
+      "Дом+участок"
+    ]
+  }, {
+    "type": "text",
+    "title": "Стоимость предмета залога",
+    "required": true,
+    "placeholder": "_ руб."
+  }]
+
+}, {
+
+  "step-title": "Информация об объекте залога",
+  "options": {
+    "img": "quiz-geo.png"
+  },
+  "fields": [{
+    "type": "radio",
+    "group-title": "Месторасположение объекта залога",
+    "required": true,
+    "values": [
+      "Санкт-Петербург и ЛО",
+      "Другой регион"
+    ]
+  }, {
+    "type": "text",
+    "title": "Ваш возраст",
+    "required": true
+  }],
+  "extrafields": {
+    "Другой регион": [{
+      "type": "text",
+      "title": "Укажите регион",
+      "required": true
+    }]
+  }
+
+}]

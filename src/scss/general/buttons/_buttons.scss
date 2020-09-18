@@ -14,4 +14,7 @@
   text-transform: uppercase;
   color: $white;
   transition: background .5s;
+  &:focus {
+    outline: 1px dotted $black;
+  }
 }

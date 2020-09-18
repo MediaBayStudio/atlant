@@ -55,6 +55,7 @@
   }
 
   >.stage-4 {
+    margin: 0;
     grid-row: 3;
     grid-column: 3;
     text-align: center;
@@ -111,6 +112,7 @@
     grid-template-columns: 100%;
     grid-row: 1/span 2;
     grid-column: 3;
+    align-self: center;
     width: 480px;
     height: 480px;
   }

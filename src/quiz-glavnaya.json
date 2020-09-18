@@ -1,0 +1,255 @@
+[{
+  "step-title": "Кем вы являетесь",
+  "options": {
+    "img": "quiz-thinking-man.png"
+  },
+  "fields": [{
+    "type": "radio",
+    "group-title": "Кем вы являетесь?",
+    "required": true,
+    "values": [
+      "Физическое лицо",
+      "Юридическое лицо"
+    ]
+  }]
+}, {
+
+  "Физическое лицо": {
+    "step-title": "Информация по кредиту",
+    "options": {
+      "img": "quiz-money.png"
+    },
+    "fields": [{
+      "type": "select",
+      "title": "Выберите тип кредита",
+      "required": true,
+      "values": [
+        "Потребительский кредит",
+        "Кредит под залог",
+        "Ипотека"
+      ]
+    }, {
+      "type": "text",
+      "title": "Сумма кредита",
+      "required": true,
+      "placeholder": "_ руб."
+    }]
+  },
+  "Юридическое лицо": {
+    "step-title": "Информация о юр. лице и по кредиту",
+    "options": {
+      "img": "quiz-docs-papers.png"
+    },
+    "fields": [{
+      "type": "text",
+      "title": "Наименование ЮЛ, ИП",
+      "required": true
+    }, {
+      "type": "text",
+      "title": "ИНН юридического лица, ИП",
+      "required": true
+    }, {
+      "type": "radio",
+      "group-title": "Выберите продукт",
+      "required": true,
+      "values": [
+        "Кредит на юридическое лицо, ИП",
+        "Банковская гарантия"
+      ]
+    }],
+    "extrafields": {
+      "Кредит на юридическое лицо, ИП": [{
+        "type": "text",
+        "title": "Сумма кредитного продукта",
+        "required": true,
+        "placeholder": "_ руб."
+      }],
+      "Банковская гарантия": [{
+        "type": "text",
+        "title": "Сумма банковской гарантии",
+        "required": true,
+        "placeholder": "_ руб."
+      }]
+    }
+  }
+
+}, {
+
+  "Кредит под залог": {
+    "step-title": "Информация о залоговом имуществе",
+    "options": {
+      "img": "quiz-village-house.png"
+    },
+    "fields": [{
+      "type": "select",
+      "title": "Объект залога",
+      "required": true,
+      "values": [
+        "Квартира",
+        "Дом",
+        "Участок",
+        "Дом+участок"
+      ]
+    }, {
+      "type": "text",
+      "title": "Стоимость предмета залога",
+      "required": true,
+      "placeholder": "_ руб."
+    }]
+  },
+  "Потребительский кредит|Ипотека": {
+    "step-title": "Информация о кредитной истории",
+    "options": {
+      "img": "quiz-alarmclock.png"
+    },
+    "fields": [{
+      "type": "text",
+      "title": "Количество открытых кредитов",
+      "required": true
+    }, {
+      "type": "select",
+      "title": "Наличие просрочек",
+      "required": true,
+      "values": [
+        "Не было просрочек",
+        "До 30 дней",
+        "Более 30 дней"
+      ]
+    }]
+  },
+  "Кредит на юридическое лицо, ИП": {
+    "step-title": "Информация по кредиту",
+    "options": {
+      "img": "quiz-tower-crane.png"
+    },
+    "fields": [{
+      "type": "checkbox",
+      "group-title": "Цель кредита",
+      "required": true,
+      "values": [
+        "Инвестиционные цели (покупка недвижимости, оборудования и пр.)",
+        "Пополнение оборотных средств",
+        "Овердрафт",
+        "На исполнение контракта",
+        "Рефинансирование",
+        "Другие цели"
+      ]
+    }]
+  },
+  "Банковская гарантия": {
+    "step-title": "Информация о банковской гарантии",
+    "options": {
+      "img": "quiz-man-with-paper.png"
+    },
+    "fields": [{
+      "type": "radio",
+      "group-title": "Выберите по какому ФЗ",
+      "required": true,
+      "values": [
+        "44-ФЗ",
+        "615-ПП",
+        "223-ФЗ",
+        "Коммерческая или др."
+      ]
+    }, {
+      "type": "text",
+      "title": "Срок банковской гарантии",
+      "required": true,
+      "placeholder": "_ дней"
+    }]
+  }
+
+}, {
+
+  "Квартира|Дом|Участок|Дом+участок": {
+    "step-title": "Информация об объекте залога",
+    "options": {
+      "img": "quiz-geo.png"
+    },
+    "fields": [{
+      "type": "radio",
+      "group-title": "Месторасположение объекта залога",
+      "required": true,
+      "values": [
+        "Санкт-Петербург и ЛО",
+        "Другой регион"
+      ]
+    }, {
+      "type": "text",
+      "title": "Ваш возраст",
+      "required": true
+    }],
+    "extrafields": {
+      "Другой регион": [{
+        "type": "text",
+        "title": "Укажите регион",
+        "required": true
+      }]
+    }
+  },
+
+  "Не было просрочек|До 30 дней|Более 30 дней": {
+    "step-title": "Персональная информация",
+    "options": {
+      "img": "quiz-geo.png"
+    },
+    "fields": [{
+      "type": "radio",
+      "group-title": "Ваша регистрация",
+      "required": true,
+      "values": [
+        "Санкт-Петербург и ЛО",
+        "Другой регион"
+      ]
+    }, {
+      "type": "text",
+      "title": "Ваш возраст",
+      "required": true
+    }],
+    "extrafields": {
+      "Другой регион": [{
+        "type": "text",
+        "title": "Укажите регион",
+        "required": true
+      }]
+    }
+  },
+
+  "44-ФЗ|615-ПП|223-ФЗ|Коммерческая или др.": {
+    "step-title": "Информация о банковской гарантии",
+    "options": {
+      "img": "quiz-man-with-paper.png"
+    },
+    "fields": [{
+      "type": "text",
+      "title": "Реестровые номера",
+      "required": true
+    }, {
+      "type": "textarea",
+      "title": "Комментарий"
+    }]
+  },
+
+  "Инвестиционные цели (покупка недвижимости, оборудования и пр.)|Пополнение оборотных средств|Овердрафт|На исполнение контракта|Рефинансирование|Другие цели": {
+    "step-title": "Информация по кредиту",
+    "options": {
+      "img": "quiz-house-on-keyboard.png"
+    },
+    "fields": [{
+      "type": "radio",
+      "group-title": "Наличие залога",
+      "required": true,
+      "values": [
+        "Нет",
+        "Eсть"
+      ]
+    }], 
+    "extrafields": {
+      "Eсть": [{
+        "type": "text",
+        "title": "Описание залога"
+      }]
+    }
+  }
+
+}]

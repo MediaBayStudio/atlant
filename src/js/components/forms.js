@@ -57,7 +57,7 @@
         $form.find('.field__inp, .field__textarea, .field').removeClass('filled error');
 
         if ($form.hasClass('quiz__form')) {
-          resetQuiz();
+          id('quiz').resetQuiz();
         }
 
         $(this)[0].resetForm();

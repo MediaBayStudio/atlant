@@ -1,0 +1,57 @@
+[{
+  "step-title": "Информация по кредиту",
+  "options": {
+    "img": "quiz-money.png"
+  },
+  "fields": [{
+    "type": "text",
+    "title": "Сумма необходимого кредита",
+    "required": true,
+    "placeholder": "_ руб."
+  }]
+}, {
+
+  "step-title": "Информация о кредитной истории",
+  "options": {
+    "img": "quiz-alarmclock.png"
+  },
+  "fields": [{
+    "type": "select",
+    "title": "Наличие кредитной истории",
+    "required": true,
+    "values": [
+      "Отсутствует",
+      "имеется, просрочек не было",
+      "имеется, были просрочки до 30 дней",
+      "имеется, были просрочки более 30 дней"
+    ]
+  }]
+
+}, {
+
+  "step-title": "Персональная информация",
+  "options": {
+    "img": "quiz-geo.png"
+  },
+  "fields": [{
+    "type": "radio",
+    "group-title": "Ваша регистрация",
+    "required": true,
+    "values": [
+      "Санкт-Петербург и ЛО",
+      "Другой регион"
+    ]
+  }, {
+    "type": "text",
+    "title": "Ваш возраст",
+    "required": true
+  }],
+  "extrafields": {
+    "Другой регион": [{
+      "type": "text",
+      "title": "Укажите регион",
+      "required": true
+    }]
+  }
+
+}]

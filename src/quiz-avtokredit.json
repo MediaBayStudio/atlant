@@ -1,0 +1,52 @@
+[{
+  "step-title": "Информация по кредиту",
+  "options": {
+    "img": "quiz-car-key-money.png"
+  },
+  "fields": [{
+    "type": "text",
+    "title": "Стоимость автомобиля",
+    "required": true,
+    "placeholder": "_ руб."
+  }, {
+    "type": "text",
+    "title": "Сумма первоначального взноса",
+    "required": true,
+    "placeholder": "_ руб."
+  }, {
+    "type": "radio",
+    "group-title": "Состояние авто",
+    "required": true,
+    "values": [
+      "Новый",
+      "Б/У"
+    ]
+  }]
+}, {
+
+  "step-title": "Персональная информация",
+  "options": {
+    "img": "quiz-geo.png"
+  },
+  "fields": [{
+    "type": "radio",
+    "group-title": "Ваша регистрация",
+    "required": true,
+    "values": [
+      "Санкт-Петербург и ЛО",
+      "Другой регион"
+    ]
+  }, {
+    "type": "text",
+    "title": "Ваш возраст",
+    "required": true
+  }],
+  "extrafields": {
+    "Другой регион": [{
+      "type": "text",
+      "title": "Укажите регион",
+      "required": true
+    }]
+  }
+
+}]

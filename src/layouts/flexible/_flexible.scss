@@ -1,0 +1,26 @@
+// assets import
+@import '../../scss/assets/colors';
+@import '../../scss/assets/mixins';
+@import '../../scss/assets/variables';
+
+.flexible-sect {
+  &__descr {
+    margin: 35px 0;
+    font: 300 14px/143% Ubuntu;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.text {
+  &-alignleft {
+    text-align: left;
+  }
+  &-aligncenter {
+    text-align: center;
+  }
+  &-alignright {
+    text-align: right;
+  }
+}

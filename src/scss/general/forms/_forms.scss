@@ -18,11 +18,6 @@ label.invalid {
   pointer-events: none;
 }
 
-// .field__inp.invalid,
-// .field__textarea {
-//   border-bottom-color: $red;
-// }
-
 $checkbox_size: 25px;
 $checkbox_margin_right: 20px;
 $checkbox_text_width: calc(100% - #{$checkbox_size + $checkbox_margin_right});
@@ -96,7 +91,8 @@ $checkbox_border_radius: 3px;
 }
 
 .field,
-.quiz__text {
+.quiz__text,
+.quiz__select {
   display: inline-flex;
   flex-flow: column;
   justify-content: flex-end;
@@ -120,7 +116,8 @@ $checkbox_border_radius: 3px;
 }
 
 .field__text,
-.quiz__text-label {
+.quiz__text-title,
+.quiz__select-title {
   margin-bottom: 12px;
   font: 500 16px/130% Ubuntu;
   &.required {
@@ -136,7 +133,8 @@ $checkbox_border_radius: 3px;
 .field__inp,
 .field__textarea,
 .quiz__text-inp,
-.quiz__text-area {
+.quiz__text-textarea,
+.quiz__select-inp {
   width: 100%;
   height: 55px;
   border: none;
@@ -154,23 +152,21 @@ $checkbox_border_radius: 3px;
     color: $medium_gray;
     transition: color .35s;
   }
-  // &:focus,
-  // &.filled,
-  // &:focus.valid,
-  // &.filled.valid {
-  //   border-bottom-color: #291956;
-  //   &::placeholder {
-  //     color: rgba(0,0,0,0);
-  //   }
-  // }
 }
 
-.quiz__text-area,
+.quiz__select-inp {
+  appearance: none;
+  outline: 0;
+  background: url('../img/caret-grey.svg') center right 15px no-repeat;
+}
+
+.quiz__text-textarea,
 .field__textarea {
   height: 110px;
 }
 
 .quiz__radio,
+.quiz__checkbox,
 .radio {
   display: flex;
   align-items: center;
@@ -181,22 +177,15 @@ $checkbox_border_radius: 3px;
 }
 
 .quiz__radio-inp,
-.radio__inp {
+.radio__inp,
+.quiz__checkbox-inp {
   position: absolute;
   opacity: 0;
   pointer-events: none;
-  &:checked {
-    ~ .quiz__radio-pseudo-inp,
-    ~ .quiz__pseudo-inp {
-      box-shadow: inset 0 0 0 8px $blue !important;
-      background: $white !important;
-      border-color: $blue !important;
-    }
-  }
 }
 
 .quiz__radio-pseudo-inp,
-.quiz__pseudo-inp {
+.quiz__checkbox-pseudo-inp {
   margin-right: 15px;
   flex-shrink: 0;
   width: 24px;
@@ -206,4 +195,55 @@ $checkbox_border_radius: 3px;
   border: 1px solid $light;
   box-shadow: inset 0 0 0 12px $white;
   transition: border-color .35s, box-shadow .35s;
+}
+
+.quiz__checkbox-pseudo-inp {
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: '';
+    margin: auto;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: 0;
+    bottom: 0;
+    background: url('../img/check.svg') center/cover no-repeat;
+    opacity: 0;
+    transition: opacity .4s;
+    border-radius: $checkbox_border_radius;
+    pointer-events: none;
+  }
+}
+
+.quiz__radio-inp,
+.radio__inp {
+  &:checked {
+    ~ .quiz__radio-pseudo-inp {
+      box-shadow: inset 0 0 0 8px $blue !important;
+      background: $white !important;
+      border-color: $blue !important;
+    }
+    ~ .quiz__radio-title {
+      color: $black;
+    }
+  }
+}
+
+.quiz__checkbox-inp:checked {
+  ~ .quiz__checkbox-pseudo-inp::after {
+    opacity: 1;
+  }
+  ~ .quiz__checkbox-title {
+    color: $black;
+  }
+}
+
+.quiz__radio-inp:focus ~ .quiz__radio-pseudo-inp,
+.quiz__checkbox-inp:focus ~ .quiz__checkbox-pseudo-inp {
+  outline: 1px dotted $black;
 }

@@ -1,4 +1,4 @@
-<section class="hero-sect container" id="hero-sect__slider"> <?php
+<section class="hero-sect container"> <?php
   $sect_title = $section['sect_title'];
   $slides = $section['slider'];
   $bottom_text = $section['bottom_text'];
@@ -9,7 +9,7 @@
     <h1 class="hero-sect__heading"><?php echo $sect_title ?></h1> <?php
   endif ?>
 
-  <div class="hero-sect__slider"> <?php
+  <div class="hero-sect__slider" id="hero-sect__slider"> <?php
     $i = 0;
     foreach ( $slides as $slide ) :
       $bg = $slide['bg'];

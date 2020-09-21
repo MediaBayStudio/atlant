@@ -2,3 +2,137 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.page-sect {
+  overflow: hidden;
+  &__title {}
+
+  &__left {}
+
+  &__btn {}
+
+  &__right {
+  }
+
+}
+
+#about-btn {
+
+}
+
+.sect {
+  >.list {
+
+  }
+  >.list-title {
+    font-size: 20px;
+  }
+}
+
+.about__title,
+.about__team-title {
+  text-align: left;
+}
+
+.about__descr,
+.number-block__descr,
+.char__name,
+.feat__descr {
+  font-size: 15px;
+}
+
+.about {
+  &__title {
+    // text-align: left;
+  }
+
+  &__descr {
+    // font-size: 15px;
+
+    >.link {
+
+    }
+  }
+
+  &__team-wrap {
+
+  }
+
+  &__team-title {
+    // text-align: left;
+  }
+
+  &__team-slider {}
+}
+
+.char {
+
+  &:last-child {
+  }
+
+  &:first-child:last-child {
+  }
+
+  &__photo {}
+
+  &__name {
+  }
+
+  &__position {
+  }
+}
+
+.number-block {
+
+  &__number-wrap {
+  }
+
+  &__number {
+
+  }
+
+  &__descr {
+    // font-size: 15px;
+  }
+}
+
+.numbers {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 75px 0 75px calc((50vw - 268px) * -1);
+  padding: 20px calc(50vw - 268px) 40px;
+  &__item {
+    margin: 0 auto 35px 0;
+    max-width: 260px;
+    &:last-child,
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+  }
+}
+
+.feats {
+
+
+  &__item {}
+}
+
+.feat {
+
+
+  &:last-child {
+
+  }
+
+  &__img {}
+
+  &__text {
+
+  }
+
+  &__title {
+
+  }
+
+  &__descr {}
+}

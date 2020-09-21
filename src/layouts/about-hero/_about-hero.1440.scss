@@ -2,3 +2,129 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.page-sect {
+
+  &__title {}
+
+  &__left {}
+
+  &__btn {}
+
+  &__right {
+  }
+
+}
+
+#about-btn {
+
+}
+
+.sect {
+  >.list {
+
+  }
+  >.list-title {
+
+  }
+}
+
+.about {
+  &__title {
+  }
+
+  &__descr {
+
+    >.link {
+
+    }
+  }
+
+  &__team-wrap {
+
+  }
+
+  &__team-title {}
+
+  &__team-slider {}
+}
+
+.char {
+
+  &:last-child {
+  }
+
+  &:first-child:last-child {
+  }
+
+  &__photo {}
+
+  &__name {
+  }
+
+  &__position {
+  }
+}
+
+.number-block {
+
+  &__number-wrap {
+  }
+
+  &__number {
+
+  }
+
+  &__descr {
+
+  }
+}
+
+.numbers {
+  margin: 100px calc((50vw - 590px) * -1) 100px 0;
+  padding: 30px calc(50vw - 590px) 45px 80px;
+  &__item {
+    width: 220px;
+    &:last-child,
+    &:nth-child(even) {
+    }
+  }
+}
+
+.number-block {
+  &__number-wrap {}
+
+  &__number {
+    font-size: 120px;
+  }
+
+  &__descr {}
+}
+
+.feats {
+
+
+  &__item {
+    width: 380px;
+  }
+}
+
+.feat {
+
+
+  &:last-child {
+
+  }
+
+  &__img {}
+
+  &__text {
+
+  }
+
+  &__title {
+
+  }
+
+  &__descr {}
+}

@@ -2,3 +2,126 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.page-sect {
+
+  &__title {}
+
+  &__left {}
+
+  &__btn {}
+
+  &__right {
+  }
+
+}
+
+#about-btn {
+  display: flex;
+}
+
+.sect {
+  >.list {
+
+  }
+  >.list-title {
+
+  }
+}
+
+.about {
+  &__title {
+  }
+
+  &__descr {
+
+    >.link {
+
+    }
+  }
+
+  &__team-wrap {
+
+  }
+
+  &__team-title {}
+
+  &__team-slider {}
+}
+
+.char {
+
+  &:last-child {
+  }
+
+  &:first-child:last-child {
+  }
+
+  &__photo {}
+
+  &__name {
+  }
+
+  &__position {
+  }
+}
+
+.number-block {
+
+  &__number-wrap {
+  }
+
+  &__number {
+
+  }
+
+  &__descr {
+
+  }
+}
+
+.numbers {
+  margin: 100px calc((50vw - 470px) * -1) 100px 0;
+  padding: 30px calc(50vw - 470px) 45px 60px;
+  width: auto;
+  &__item {
+    width: 180px;
+    &:last-child,
+    &:nth-child(even) {
+    }
+  }
+}
+
+.number-block {
+  &__number-wrap {}
+
+  &__number {}
+
+  &__descr {}
+}
+
+.feats {
+
+
+  &__item {}
+}
+
+.feat {
+
+
+  &:last-child {
+
+  }
+
+  &__img {}
+
+  &__text {
+
+  }
+
+  &__title {
+
+  }
+
+  &__descr {}
+}

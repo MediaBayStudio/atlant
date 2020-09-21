@@ -1,10 +1,10 @@
-<section class="faq-sect container">
-  <h1 class="faq-sect__title page-title">Вопросы-ответы</h1>
-  <div class="faq-sect__left">
-    <button type="button" class="faq-sect__btn btn" id="opening-faq-popup-btn">Задать свой вопрос</button> <?php
+<section class="page-sect container">
+  <h1 class="page-sect__title page-title">Вопросы-ответы</h1>
+  <div class="page-sect__left">
+    <button type="button" class="page-sect__btn btn" id="opening-faq-popup-btn">Задать свой вопрос</button> <?php
     get_template_part('layouts/secondary-pages-nav/secondary-pages-nav') ?>
   </div>
-  <div class="faq-sect__right" id="faqs"> <?php
+  <div class="page-sect__right" id="faqs"> <?php
     $faqs = get_field( 'faq' );
     if ( $faqs ) :
       for ( $i = 0, $len = count( $faqs ); $i < $len; $i++ ) :

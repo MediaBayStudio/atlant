@@ -5,13 +5,16 @@
 
 .hdr {
   padding-top: 0;
+
   &.fixed {
     padding-top: 0;
     padding-bottom: 0;
+
     .hdr__nav {
       margin: 0;
     }
   }
+
   &::before {
     content: '';
     position: absolute;
@@ -22,20 +25,25 @@
     background: $white;
     z-index: -1;
   }
+
   &__burger {
     display: none;
   }
+
   &__logo {
     margin-top: -15px;
   }
+
   &__logo-img {
     display: block;
     width: 240px;
     height: 67px;
+
     &_vertical {
       display: none;
     }
   }
+
   &__nav {
     margin: 0 0 25px;
     display: block;
@@ -45,18 +53,21 @@
     color: $blue;
     position: relative;
     box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+
     &-list {
       display: flex;
       align-items: center;
       justify-content: space-between;
       height: 64px;
-      > .nav__list-item {
+
+      >.nav__list-item {
         display: flex;
         align-items: center;
         height: 100%;
         border-bottom: 1px solid transparent;
         transition: border-bottom-color .35s, color .35s;
         position: relative;
+
         // Меню с подменю (услуги)
         &.contains-submenu {
           &::after {
@@ -69,14 +80,16 @@
             transition: transform .35s;
           }
         }
-        > .nav__link {
+
+        >.nav__link {
           display: flex;
           align-items: center;
           padding: 0 10px;
           height: 100%;
         }
+
         // Общее подменю у пунка меню (большой блок)
-        > .sub-menu {
+        >.sub-menu {
           min-width: calc(100% + 60px);
           // padding: 30px 20px 30px 60px;
           padding: 30px 60px 30px;
@@ -94,43 +107,55 @@
           box-shadow:
             0px 20px 20px rgba(0, 0, 0, 0.1),
             inset 0 20px 20px -20px rgba(0, 0, 0, 0.1);
-          &.contains-submenu {
 
+          .nav__link {
+            font-weight: lighter;
           }
-          > .nav__list-item {
+
+          &.contains-submenu {}
+
+          >.nav__list-item {
             margin-bottom: 10px;
+
             // Кредитование физ. лиц
             &.submenu-title {
               margin: 0 40px 18px 0;
               cursor: default;
-              > .nav__link {
+
+              >.nav__link {
                 color: $black !important;
                 font: 20px/133% Ubuntu;
               }
+
               // Подменю с разделами "под залог", "без залога" и т.д.
-              > .sub-menu {
+              >.sub-menu {
                 // margin-top: 20px;
                 display: flex;
                 flex-wrap: wrap;
+
                 // Подзаголовок "без залога" и т.д.
-                > .nav__list-item {
+                >.nav__list-item {
                   margin-top: 18px;
                   color: $black;
+
                   // если у элемента есть подменю, будем красить ссылку в др. цвет
                   &.contains-submenu {
+
                     // ссылка внутри
-                    > .nav__link {
+                    >.nav__link {
                       font: 500 16px/133% Ubuntu;
                       color: $dark;
                       text-transform: uppercase;
                     }
                   }
                 }
-                > .contains-submenu {
+
+                >.contains-submenu {
+
                   // margin-top: 18px;
                   // Самое глубокое подменю
-                  > .sub-menu {
-                    > .nav__list-item {
+                  >.sub-menu {
+                    >.nav__list-item {
                       margin-top: 10px;
                       color: $black;
                     }
@@ -138,6 +163,7 @@
                 }
               }
             }
+
             .nav__link {
               transition: color .35s;
             }
@@ -146,8 +172,9 @@
       }
     }
   }
+
   &__contacts {
-    margin: 0 60px 0 auto; 
+    margin: 0 60px 0 auto;
   }
 }
 
@@ -164,6 +191,7 @@
     padding-left: calc(50vw - 470px);
     padding-right: calc(50vw - 470px);
   }
+
   >.nav__list-item {
     >.sub-menu {
       >.nav__list-item {
@@ -171,6 +199,7 @@
           &:last-child {
             margin-right: 0;
           }
+
           >.sub-menu {
             >.contains-submenu {
               >.sub-menu {
@@ -179,6 +208,7 @@
                 }
               }
             }
+
             >.nav__list-item {
               width: 245px;
             }
@@ -190,7 +220,7 @@
 }
 
 
- 
+
 .breadcrumbs {
   margin-bottom: 35px;
 }

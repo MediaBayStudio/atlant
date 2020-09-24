@@ -27,6 +27,7 @@
     'SegoeUI-SemiBold.woff'
   ];
   foreach ( $fonts as $font ) : ?>
+    
   <link rel="preload" href="<?php echo $template_directory . '/fonts/' . $font ?>" as="font" type="font/woff" crossorigin="anonymous" /> <?php
   endforeach ?>
   <!-- favicons -->
@@ -46,6 +47,7 @@
     <!-- <noindex> -->Для полноценного использования сайта включите JavaScript в настройках вашего браузера.
     <!-- </noindex> -->
   </noscript>
+  <!-- <div id="preloader" style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:#f1f3f3;z-index:9999;"></div> -->
   <header class="hdr"> <?php
     # Меню в шапке
     wp_nav_menu( [
@@ -113,7 +115,7 @@
       </div>
     </div> <?php
     # Мобильное меню
-    require 'layouts/mobile-menu/mobile-menu.php' ?>
+    get_template_part( 'mobile-menu' ) ?>
   </header> <?php
   if ( !$is_front_page && !$is_404 ) : ?>
   <div class="breadcrumbs container">

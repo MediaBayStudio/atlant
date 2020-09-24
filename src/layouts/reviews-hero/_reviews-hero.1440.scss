@@ -2,3 +2,42 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.page-sect {
+  &__title {
+  }
+  &__left {
+  }
+  &__btn {
+  }
+  &__right {
+  }
+}
+
+.review {
+  &__top {
+  }
+  &__figure {
+  }
+  &__photo {
+  }
+  &__title-block {
+  }
+  &__name {
+  }
+  &__service-name {
+  }
+  &__rate-block {
+  }
+  &__manager-rate {
+  }
+  &__stars {
+  }
+  &__common-rate {
+  }
+  &__date {
+  }
+  &__video {
+    height: 440px;
+  }
+}

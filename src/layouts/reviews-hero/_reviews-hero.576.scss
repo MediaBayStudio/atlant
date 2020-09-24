@@ -2,3 +2,69 @@
 @import '../../scss/assets/colors';
 @import '../../scss/assets/mixins';
 @import '../../scss/assets/variables';
+
+.page-sect {
+  &__title {
+  }
+  &__left {
+  }
+  &__btn {
+  }
+  &__right {
+  }
+}
+
+.review {
+  &__top {
+  }
+  &__figure {
+    width: 60px;
+    height: 60px;
+  }
+  &__photo {
+  }
+  &__title-block {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+  }
+  &__name {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    &::after {
+      content: '';
+      display: inline-block;
+      margin: 0 20px;
+      width: 2px;
+      height: 18px;
+      background: $medium-gray;
+    }
+  }
+  &__service-name {
+    font-size: 14px;
+  }
+  &__rate-block {
+    margin: 10px 0 0 80px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+  }
+  &__manager-rate {
+    margin-right: 0;
+  }
+  &__stars {
+    margin-top: 8px;
+  }
+  &__common-rate {
+    margin-left: 55px;
+  }
+  &__date {
+    margin: 0 0 0 auto;
+    padding: 5px 7.5px;
+  }
+  &__video {
+    margin: 30px 0 0 80px;
+  }
+}

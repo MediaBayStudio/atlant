@@ -3,6 +3,5 @@
 Template name: Отзывы
 */
 get_header();
-
-require 'layouts/reviews-hero/reviews-hero.php';
+require 'template-parts/reviews-hero.php';
 get_footer();

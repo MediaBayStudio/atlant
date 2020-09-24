@@ -1,4 +1,19 @@
 <?php
+$template_directory = get_template_directory_uri();
+$site_url = site_url();
+$is_front_page = is_front_page();
+$is_404 = is_404();
+
+$address = get_option( 'contacts_address' );
+$tel_people = get_option( 'contacts_tel_people' );
+$tel_people_dry = preg_replace( '/\s/', '', $tel_people );
+$tel_company = get_option( 'contacts_tel_company' );
+$tel_company_dry = preg_replace( '/\s/', '', $tel_company );
+$phones = [ $tel_people, $tel_company ];
+$phones_dry = [ $tel_people_dry, $tel_company_dry ];
+$phones_sign = [ 'Для физических лиц', 'Для юр. лиц и партнеров' ];
+$email = get_option( 'contacts_email' );
+$whatsapp = get_option( 'contacts_whatsapp' );
 // Отключаем разные стандартные скрипты и стили wp
 add_action( 'init', function() {
   // Отключаем wp-emoji
@@ -104,7 +119,7 @@ function enqueue_style( $style_name, $widths ) {
 add_action( 'wp_enqueue_scripts', function() {
   $screen_widths = ['0', '420', '576', '768', '1024', '1440']; // на каких экранах подключать css
 
-  wp_enqueue_style( 'theme-style', get_stylesheet_uri() );        // подключить стиль темы (default)
+  wp_enqueue_style( 'theme-style', get_stylesheet_uri(), [], null );        // подключить стиль темы (default)
 
   // подключаем стили с помощью своей функции
   enqueue_style( 'style', $screen_widths );
@@ -119,15 +134,14 @@ add_action( 'wp_enqueue_scripts', function() {
 
   // Подключаем скрипты циклом
   $scripts = [
-				'slick.min',
-			'jquery.validate.min',
-			'lazy.min',
-			'MobileMenu.min',
-			'Popup.min',
-			'svg4everybody.min',
-      // 'tail.select.min',
-			'main'
-		];
+		'slick.min',
+		'jquery.validate.min',
+		'lazy.min',
+		'MobileMenu.min',
+		'Popup.min',
+		'svg4everybody.min',
+		'main'
+	];
 
   foreach ( $scripts as $script_name ) {
     wp_enqueue_script( "{$script_name}", get_template_directory_uri() . "/js/{$script_name}.js", [], null );
@@ -146,22 +160,18 @@ add_action( 'wp_enqueue_scripts', function() {
 
 // Убираем id и type в тегах script, добавляем нужным атрибут defer
   add_filter('script_loader_tag',   function( $html, $handle ) {
-
-    $defer_scripts = [
-      'slick.min',
-      'jquery.validate.min',
-      'lazy.min',
-      'MobileMenu.min',
-      'Popup.min',
-      'svg4everybody.min',
-      // 'tail.select.min',
-      'main'
-    ];
-
-    foreach( $defer_scripts as $id ) {
-      if ( $id === $handle ) {
+    switch ( $handle ) {
+      case 'value':
+      case 'slick.min':
+      case 'jquery.validate.min':
+      case 'lazy.min':
+      case 'MobileMenu.min':
+      case 'Popup.min':
+      case 'svg4everybody.min':
+      case 'main':
+      case 'contact-form-7':
         $html = str_replace( ' src', ' defer src', $html );
-      }
+        break;
     }
 
     $html = str_replace( " id='$handle-js' ", '', $html );
@@ -174,6 +184,18 @@ add_action( 'wp_enqueue_scripts', function() {
   add_filter( 'style_loader_tag', function( $html, $handle ) {
     $html = str_replace( " id='$handle-css' ", '', $html );
     $html = str_replace( " type='text/css'", '', $html );
+
+    switch ( $handle ) {
+      case 'theme-style':
+      case 'style-page':
+      // case 'service-page':
+      // case 'pages-page':
+      $html = str_replace( "rel='stylesheet'", "rel='preload' as='style' onload=\"this.rel='stylesheet'\"", $html );
+        break;
+    }
+
+
+    // $html = str_replace( "rel='stylesheet'", "rel='preload' as='style' onload=\"this.rel='stylesheet'\"", $html );
     return $html;
   }, 10, 2 );
  /* Настройка контактов в панели настройки->общее */
@@ -193,7 +215,7 @@ add_action( 'wp_enqueue_scripts', function() {
       'whatsapp' => 'WhatsApp'
     ];
 
-    foreach ($options as $id => $name) {
+    foreach ( $options as $id => $name ) {
       $my_id = "contacts_{$id}";
 
       add_settings_field( $id, $name, 'options_inp_html', 'general', 'default', $my_id );

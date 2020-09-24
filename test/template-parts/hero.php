@@ -1,9 +1,10 @@
 <section class="hero-sect container"> <?php
-global $section;
   $sect_title = $section['sect_title'];
   $slides = $section['slider'];
   $bottom_text = $section['bottom_text'];
   $add_form = $section['add_form'];
+  $template_dir = get_template_directory();
+
   if ( $sect_title ) : ?>
     <h1 class="hero-sect__heading"><?php echo $sect_title ?></h1> <?php
   endif ?>

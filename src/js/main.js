@@ -93,6 +93,17 @@ document.addEventListener('DOMContentLoaded', function() {
       event.preventDefault();
     }
   });
+
+  // let preloader = id('preloader');
+
+  // if (preloader) {
+  //   window.addEventListener('load', function() {
+  //     preloader.classList.add('loaded');
+  //     preloader.addEventListener('animationend', function() {
+  //       preloader.classList.add('hidden');
+  //     });
+  //   });
+  // }
   
   //includes
 let hdrNavServicesListItem = q('[href="#services"]').parentElement,
@@ -1586,6 +1597,5 @@ $.validator.methods.userMsg = function(value, element) {
   }
 
 })();
-//=include contacts-map.js
 
 });
